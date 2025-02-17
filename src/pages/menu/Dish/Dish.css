@@ -1,0 +1,24 @@
+
+.dish {
+    width: 17rem;
+    text-align: center;
+    border-radius: 55px;
+    padding: 0.5rem;
+    background-color: #fafaf9;
+}
+
+.dish-img {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.dish p {
+    margin: 0 0 0.5rem;
+}
+
+.dish-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}

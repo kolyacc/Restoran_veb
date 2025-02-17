@@ -1,0 +1,386 @@
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+  
+}
+
+.text {
+  float: left;
+  width: 50%;
+}
+
+.images {
+  float: left;
+  width: 50%;
+}
+
+.text2 {
+  float: right;
+  width: 50%;
+}
+
+.images2 {
+  float: right;
+  width: 50%;
+}
+
+.eat{
+  width: 50%;
+  
+}
+
+/*Menu*/
+
+.dish-container {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 3rem;
+  row-gap: 3rem;
+  max-width: 68%;
+  margin: 0 auto;
+}
+
+
+
+
+/*ReservationBlock*/
+#ReservationBlock{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #fffbf5;
+}
+@media (max-width: 767px){
+  #ReservationBlock{
+    flex-direction: column-reverse;
+  }
+}
+
+.ReservationTextBlock{
+  max-width: 80%;
+  padding-top: 20vh;
+  padding-left: 5%;
+}
+#ReservationButton{
+  display: flex;
+}
+.ReservationText{
+  text-align: left;
+  font-size: 4em;
+  
+}
+.ReservationText span{
+  color:#ff8a00
+}
+.ReservationTextP{
+  text-align: left;
+  max-width: 90%;
+}
+
+.ReservationImgBlock{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+.ReservationImg1{
+  display: flex;
+  justify-content: flex-end;
+}
+.ReservationImg3{
+  display: flex;
+  justify-content: flex-start;
+}
+#ReservationImg1,#ReservationImg3{
+  object-fit: cover;
+  border-radius: 100%;
+  width: 15vh;
+  height: 15vh;
+  margin: 5vh;
+  box-shadow: 0 0 0 15px #f9f0e4;
+  position: relative;
+}
+#ReservationImg2{
+  object-fit: cover;
+  border-radius: 100%;
+  width: 20em;
+  height: 20em;
+  margin-left: 10vh;
+  margin-right: 10vh;
+  box-shadow: 0 0 0 35px #f9f0e4,0 0 0 120px #fffbf5, 0 0 0 121px #ede8e0;
+}
+/*Chef*/
+
+
+.ChefContainer{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+}
+
+.chef{
+  display: flex;
+  justify-content: center;
+  
+  width:  36vh;
+  height: 50vh;
+  border-radius: 25px;
+  margin: 5vh;
+}
+@media (max-width: 767px){
+  .chef{
+    display: flex;
+    width:  18vh;
+    height: 25vh;
+    border-radius: 25px;
+    margin: 0;
+  }
+  .ChefContainer{
+    
+    display: flex;
+    padding: 5vh;
+
+
+  }
+}
+
+#chef1{
+  
+  background-color: #d1d0d2;
+  
+}
+#chef2{
+  background-color: #ffe8cc;
+}
+#chef3{
+  background-color: #ebe0d9;
+}
+
+#ChefAllVive{
+  margin-top: 100px;
+}
+.ChefText{
+  font-size: 3rem;
+  margin: 100px;
+}
+/*People block*/
+#PeopleBlock{
+  background: radial-gradient(circle at 101px 150px, #CEEFC8 50px, transparent 10px),
+              radial-gradient(circle at 340px 365px, #3fbfff48 22px, transparent 15px),
+              radial-gradient(circle at 1020px 500px, #f563634b 49px, transparent 15px),
+              radial-gradient(circle at 1500px 650px, #F3A7FF 37px, transparent 15px),
+              radial-gradient(circle at 150px 700px, #ff880074 32px, transparent 15px),
+              radial-gradient(circle at 310px 1100px, #ff880066 20px, transparent 20px);
+  background-color:#d0ccc73e;
+  padding-bottom: 100px;
+}
+.PeopleBox{
+  display: inline-block;
+}
+.peopleImg{
+  border-radius: 50%;
+  max-width: 150%;
+  margin: 2%;
+}
+
+@media (max-width: 767px){
+  #peopleImg1,#peopleImg6{
+    
+    display: none;
+  }
+}
+
+@media (min-width: 767px) {
+  #peopleImg6,#peopleImg1{
+    max-width: 5%;
+    margin: 0%;
+    margin-bottom: 27%;
+    display: inline-block;  
+  }
+}
+#peopleImg5,#peopleImg2{
+  max-width: 10%;
+  margin: 0%;
+  margin-bottom: 15%;
+  
+}
+#peopleImg4,#peopleImg3{
+  max-width: 15%;
+  margin-bottom: 6%;
+}
+#peopleImg7{
+  max-width: 15%;
+  box-shadow: 0 0 0 15px #fdc686, 0 0 0 30px #fbefe0;
+  margin: 5%;
+  margin-bottom: 1%;
+}
+#peopleImg8{
+  max-width: 155px
+}
+@media (max-width: 767px){
+  .TextPeople{
+    margin: auto;
+    max-width: 60%;
+    letter-spacing:0.08em;
+    line-height: 160%;
+  }
+}
+
+@media (min-width: 767px) {
+  .TextPeople{
+    margin: auto;
+    max-width: 37%;
+    letter-spacing:0.08em;
+    line-height: 160%;
+  }
+}
+
+.HeaderTextPeople{
+  padding-top: 10%;
+  font-family:'Times New Roman', Times, serif;
+  font-size: 300%;
+}
+.FinancialAdvisor{
+  margin-bottom: 60px;
+  letter-spacing:0.08em;
+}
+/*OpeningHoursCard*/
+.OpeningHoursCard{
+  background: linear-gradient( rgba(57, 57, 57, 0.8), rgba(0, 0, 0, 0.5) ), url(../../assets/ramen.png);
+  
+  margin: 15%;
+  padding: 2%;
+  position: relative;
+  border-radius: 50px;
+  
+  max-width: 70%;
+  max-height: 600px;
+  background-size:150%;
+  background-position-x:60%;
+  background-position-y:60%;
+
+}
+.OpeningHoursCardTextp{
+  font-size: 90%;
+  color: #ffffff;
+}
+.OpeningHoursCardTexth1{
+  font-size: 250%;
+  color: #ffffff;
+}
+.OpeningHoursCardTexth2{
+  font-size: 150%;
+  color: #ffffff;
+}
+
+.ReservationButton{
+  
+  margin: 5%;
+  height: 50px;
+  width: 200px;
+  border-radius: 30px;
+  background-color: #f2f2f2;
+  color: black;
+}
+
+
+/*FOOTER*/
+footer{
+  background-color: rgb(49, 31, 9);
+  display:flex;
+  width: 100%;
+  flex-wrap: wrap;
+   
+}
+@media (min-width: 767px) {
+  .Info{
+    max-width: 15%;
+    margin-top: 10%;
+    padding-left: 5%; 
+    margin: 5%
+  }
+}
+
+@media (max-width: 767px) {
+  footer {
+    display: grid; /* Переключаем на вертикальное расположение */
+  }
+  .Info{
+    max-width: 500px;
+    padding-left: 5%; 
+    margin-top: 5%;
+    margin-bottom: 0;
+  }
+  
+}
+.LogoFooter{
+  margin-top: 9px;
+  margin-bottom: 10px;
+  width: 40px;
+}
+.LogoName {
+  color:rgb(227, 226, 223) ;
+  font-size: 1rem;
+  margin-top: 20px;
+  margin-bottom: 35p
+}
+.LogoName span{
+  color:#ff8a00
+}
+.footerText{
+  color: rgb(227, 226, 223) ;
+  max-width:  250px;
+  letter-spacing:0.08em;
+  line-height: 160%;
+  word-spacing: 100%;
+}
+
+.footerH1{
+  color: rgb(255, 138, 0);
+}
+.socialsite{
+  max-width: 25px;
+  
+}
+.socialsiteButton{
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  margin-right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+}
+
+.buttonBlock{
+  display: flex;
+}
+
+.footerButton{
+  color :rgb(227, 226, 223);
+  background: none;
+  border: none;
+  margin-top: 15px;
+  
+}
+
+
+.Page{
+  margin-top: 10%;
+  margin: 5%;
+  margin-bottom: 0;
+}
+.Information{
+  margin-top: 10%;
+  margin: 5%;
+  margin-bottom: 0;
+  margin-right:5% ;
+}
+.contacts{
+  margin-top: 10%;
+  margin: 5%;
+  margin-left: 5%;
+}

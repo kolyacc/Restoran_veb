@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'CustomFont'; 
+    src: url('.\assets\Fonts\Poppins-Light.ttf');
+}
+@font-face {
+    font-family: 'CustomFont-Medium'; 
+    src: url('.\assets\Fonts\Poppins-Light-Medium.ttf');
+}
+:root {
+    line-height: 1.5;
+    font-weight: 2;
+    font-family: 'CustomFont';
+}
+
+
+body {
+    margin: 0;
+    display: flex;
+    place-items: top;
+    min-width: 320px;
+    min-height: 100vh;
+    font-family: 'CustomFont';
+
+}
+
+h1 {
+    font-size: 1.5em;
+    line-height: 1.1;
+}
+
+p{
+    font-size: 1em;
+    line-height: 1.1;
+}
+
+button{
+    font-family: 'CustomFont';
+    font-size: 1.2em;
+    border-radius: 25px;
+    border: none;
+    background-color: #ff8a00;
+    color: aliceblue;
+    
+}
+
+.OrengeButton{
+    margin: 5%;
+    margin-top: 1%;
+    height: 50px;
+    width: 200px;
+    border-radius: 30px;
+    background-color: #ff8a00;
+}
+
+.block{
+    height: auto;
+    width: 100%;
+    
+    margin: 0 auto;
+  
+    text-align: center;
+}
