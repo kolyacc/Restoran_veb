@@ -1,0 +1,167 @@
+header {
+  margin: 30px;
+}
+.container{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.container a{
+  margin: 0 15px 0 15px;
+}
+
+.LogoHeader{
+  margin-top: 9px;
+  margin-bottom: 10px;
+  width: 30px;
+  background-color: rgb(49, 31, 9);
+  border-radius: 50%;
+  padding: 5px;
+  margin-right: 20px;
+}
+.LogoNameHeader {
+  color:rgb(49, 31, 9) ;
+  font-size: 1rem;
+  margin-top: 12px;
+  margin-bottom: 35p;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.LogoNameHeader span{
+  color:#ff8a00
+}
+.headerButton{
+  color :rgb(49, 31, 9);
+  margin-top: 15px;
+  text-decoration: none;
+  font-size: 1.0rem;
+  font-weight: 600;
+}
+.activeHeader{
+  color: #ff8a00;
+  margin-top: 15px;
+  font-size: 1.0rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+.LogInButton{
+  background-color: #3fa72f; padding: 15px;
+  border-radius: 30PX;
+  width: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+}
+/*Footer*/
+footer{
+    background-color: rgb(49, 31, 9);
+    display:flex;
+    width: 100%;
+    flex-wrap: wrap;
+     
+  }
+  @media (min-width: 767px) {
+    .Info{
+      max-width: 15%;
+      margin-top: 10%;
+      padding-left: 5%; 
+      margin: 5%
+    }
+  }
+
+  @media (max-width: 767px) {
+    footer {
+      display: grid; /* Переключаем на вертикальное расположение */
+    }
+    .Info{
+      max-width: 500px;
+      padding-left: 5%; 
+      margin-top: 5%;
+      margin-bottom: 0;
+    }
+    
+  }
+  .LogoFooter{
+    margin-top: 9px;
+    margin-bottom: 10px;
+    width: 40px;
+  }
+  .LogoName {
+    color:rgb(227, 226, 223) ;
+    font-size: 1rem;
+    margin-top: 20px;
+    margin-bottom: 35p
+  }
+  .LogoName span{
+    color:#ff8a00
+  }
+  .footerText{
+    color: rgb(227, 226, 223) ;
+    max-width:  250px;
+    letter-spacing:0.08em;
+    line-height: 160%;
+    word-spacing: 100%;
+  }
+  
+  .footerH1{
+    color: rgb(255, 138, 0);
+  }
+  .socialsite{
+    max-width: 25px;
+    
+  }
+  .socialsiteButton{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+  }
+  
+  .buttonBlock{
+    display: flex;
+  }
+  
+  .footerButton{
+    color :rgb(227, 226, 223);
+    
+    margin-top: 15px;
+    text-decoration: none;
+  }
+  .activeFooter{
+    color: #ff8a00;
+    margin-top: 15px;
+    text-decoration: none;
+  }
+  .footerButton:hover{
+    color: #ff8a00;
+  }
+  .Page{
+    display: grid;
+
+    margin-top: 10%;
+    margin: 5%;
+    margin-bottom: 0;
+  }
+  .Information{
+    display: grid;
+    grid-row-gap: 5px;
+    height: 12vh;
+ 
+    margin-top: 10%;
+    margin: 5%;
+    margin-bottom: 0;
+    margin-right:5% ;
+  }
+  .contacts{
+    
+    margin-top: 10%;
+    margin: 5%;
+    margin-left: 5%;
+  }
