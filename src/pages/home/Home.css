@@ -1,40 +1,121 @@
-.group:after {
-  content: "";
-  display: table;
-  clear: both;
+
+/*ItalianCuisite*/
+.ItalianCuisite{
+  display: flex;
+  padding: 10% 10% 0 10%;
+ 
+}
+.ItalianCuisiteText{
+  display: flex ;
+  flex-direction: column;
+  justify-items: left;
+  
+  max-width: 50%;
+}
+@media (max-width: 767px){
+  .ItalianCuisite{
+    flex-direction: column;
+  }
+  .ItalianCuisiteText{
+    
+    max-width: 100%;
+  }
+  .ItalianCuisitePasta{
+    width: 95%;
+  }
+
   
 }
 
-.text {
-  float: left;
-  width: 50%;
-}
 
-.images {
-  float: left;
-  width: 50%;
+.ItalianCuisiteText h2{
+  background-color: #ff880062;
+  border-radius: 25px;
+  padding: 5px 15px 5px 15px;
+  font-size: 1em;
+  width: 20%;
+  
+  color: #FF8A00;
 }
-
-.text2 {
-  float: right;
-  width: 50%;
+.ItalianCuisiteText h1{
+ 
+  font-weight:bold;
+  font-size: 3.5em;
+  font-family:Arial, Helvetica, sans-serif;
+  text-align: left;
+  font-weight: 700;
 }
-
-.images2 {
-  float: right;
-  width: 50%;
+.ItalianCuisiteText p{
+  font-size: 1.3em;
+  text-align: left;
+  
+  font-family:Arial, Helvetica, sans-serif;
+  line-height: 1.6em;
+  word-spacing: 4px;
 }
-
-.eat{
-  width: 50%;
+.ItalianCuisiteButton{
+  display: flex;
   
 }
+.ItalianCuisiteButton button {
+    height: 50px;
+    width: 200px;
+    border-radius: 30px;
+    background-color: #ff8a00;
+    margin: 5%;
+}
 
+/*VelcomToDelizioso*/
+.VelcomToDelizioso{
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 5% 10% 0 10%;
 
+  background-color: #3fc66e1d;
+}
+.VelcomToDeliziosoText{
+  display: flex ;
+  flex-direction: column;
+  justify-items: left;
+  
+  width: 50%;
+}
+.VelcomToDeliziosoSalad{
+  width: 90%;
+}
+.VelcomToDeliziosoText h1{
+  font-size: 3em;
+}
+.VelcomToDeliziosoText h1 span{
+  color: #ff8a00;
+}
+.VelcomToDeliziosoText p{
+  font-size: 1.2em;
+  text-align: left;
+  width: 90%;
+  line-height: 1.6em;
+  word-spacing: 3px;
+}
+.VelcomToDeliziosoText button{
+  height: 50px;
+  width: 200px;
+  border-radius: 30px;
+  background-color: #ff8a00;
+  margin-top:20% ;
+}
 
-
-
-
+@media (max-width: 767px){
+  .VelcomToDelizioso{
+    flex-direction: column;
+  }
+  .VelcomToDeliziosoText{
+    
+    width: 100%;
+  }
+  .VelcomToDeliziosoSalad{
+    width: 95%;
+  }
+}
 /*ReservationBlock*/
 #ReservationBlock{
   display: flex;

@@ -10,6 +10,7 @@
 .dish-img {
     width: 60%;
     margin: 0 auto;
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
 }
 
 .dish p {

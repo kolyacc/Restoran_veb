@@ -1,5 +1,5 @@
-import reactLogo from './DishPhoto/spaghetti.png'
-
+import DishPhoto from './DishPhoto/spaghetti.png'
+import star from './star_77949.svg'
 export const Dishes = [
     {
         id: 1,
@@ -7,7 +7,7 @@ export const Dishes = [
         rating: '⭐⭐⭐⭐⭐',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam. ',
         price: 25.5,
-        dishImg: reactLogo
+        dishImg: DishPhoto
     },
     {
         id: 2,
@@ -15,7 +15,7 @@ export const Dishes = [
         rating: '⭐⭐⭐⭐⭐',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam. ',
         price: 25.5,
-        dishImg: reactLogo
+        dishImg: DishPhoto
     },
     {
         id: 3,
@@ -23,7 +23,7 @@ export const Dishes = [
         rating: '⭐⭐⭐⭐⭐',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam. ',
         price: 25.5,
-        dishImg: reactLogo
+        dishImg: DishPhoto
     },
     {
         id: 4,
@@ -31,7 +31,7 @@ export const Dishes = [
         rating: '⭐⭐⭐⭐⭐',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam. ',
         price: 25.5,
-        dishImg: reactLogo
+        dishImg: DishPhoto
     },
     {
         id: 5,
@@ -39,7 +39,7 @@ export const Dishes = [
         rating: '⭐⭐⭐⭐⭐',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam. ',
         price: 25.5,
-        dishImg: reactLogo
+        dishImg: DishPhoto
     },
     {
         id: 6,
@@ -47,6 +47,6 @@ export const Dishes = [
         rating: '⭐⭐⭐⭐⭐',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam. ',
         price: 25.5,
-        dishImg: reactLogo
+        dishImg: DishPhoto
     },
 ]

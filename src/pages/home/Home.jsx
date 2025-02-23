@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import reactLogo from '../../assets/react.svg'
+import Pasta from '../../assets/Pasta.svg'
+import Salad from '../../assets/salad.svg'
 import people1 from '../../assets/PeoplePhoto/People1.png'
 import people2 from '../../assets/PeoplePhoto/people2.png'
 import people3 from '../../assets/PeoplePhoto/people3.png'
@@ -25,38 +27,39 @@ function Home() {
       
         
       <div className='block'>
-        <div className='group'>
-          <div className='text'>
+        <div className='ItalianCuisite'>
+          <div className='ItalianCuisiteText'>
             <h2>Resultat</h2>
-            <h1>Italian Cuisite</h1>
-            <h2>Lorem ipsum dolor sit ameti consectetur adipiscing
-                elit Sodales senectus dictum arcu sit tristique
+            <h1>Italian<br/>Cuisite</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit. Sodales senectus dictum arcu sit tristique
                 donec eget.
-            </h2>
-            <div>
-              <button>Order now</button>
-              <button>Reservation</button>
+            </p>
+            <div className='ItalianCuisiteButton'>
+              <button >Order now</button>
+              <button  style={{ backgroundColor: '#3FA72F' }}>Reservation</button>
+
             </div>
           </div>
           <div className='images'>
-            <img className='eat' src={reactLogo} alt='eat'/>
+            <img className='ItalianCuisitePasta' src={Pasta}/>
           </div>
         </div>
       </div>
-      <div className='block'>
-          <div className='text2'>
-            <h1>Veclom to delizioso</h1>
-            <h2>Lorem ipsum dolor sit amet, consectetur
+      <div className='VelcomToDelizioso'>
+          <div className='VelcomToDeliziosoText'>
+            <h1>Veclom to <br /><span>delizioso</span></h1>
+            <p>Lorem ipsum dolor sit amet, consectetur
                 adipiscing elit Facilisis ultricies at eleifend
                 proin. Congue nibh nulla malesuada
                 ultricies nec quam
-            </h2>
+            </p>
             <div>
               <button>Sea our menu</button>
             </div>
           </div>
-          <div className='images2'>
-            <img className='eat' src={reactLogo} alt='eat'/>
+          <div>
+            <img className='VelcomToDeliziosoSalad' src={Salad}/>
           </div>
         </div>
 

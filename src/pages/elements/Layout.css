@@ -9,7 +9,13 @@ header {
 .container a{
   margin: 0 15px 0 15px;
 }
-
+@media (max-width: 767px){
+  .container{
+    display: grid;
+    
+  }
+  
+}
 .LogoHeader{
   margin-top: 9px;
   margin-bottom: 10px;
@@ -24,8 +30,6 @@ header {
   font-size: 1rem;
   margin-top: 12px;
   margin-bottom: 35p;
-  font-size: 1rem;
-  font-weight: 600;
 }
 .LogoNameHeader span{
   color:#ff8a00
@@ -61,6 +65,7 @@ footer{
     display:flex;
     width: 100%;
     flex-wrap: wrap;
+    padding-bottom: 50px;
      
   }
   @media (min-width: 767px) {
@@ -74,7 +79,8 @@ footer{
 
   @media (max-width: 767px) {
     footer {
-      display: grid; /* Переключаем на вертикальное расположение */
+      display: flex; /* Переключаем на вертикальное расположение */
+      flex-direction: column;
     }
     .Info{
       max-width: 500px;
@@ -82,7 +88,9 @@ footer{
       margin-top: 5%;
       margin-bottom: 0;
     }
-    
+    .contacts{
+      padding-top: 90px;
+    }
   }
   .LogoFooter{
     margin-top: 9px;

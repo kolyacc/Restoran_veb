@@ -6,11 +6,11 @@ function Dish(props){
     return(
     <div className='dish'>
         <img className='dish-img' src={DishImg} alt='dish image'></img>
-        <p>{title}</p>
+        <h2 >{title}</h2>
         <p>{rating}</p>
         <p>{description}</p>
         <div className='dish-footer'>
-            <p>${price}</p>
+            <h2>${price}</h2>
             <button className='OrengeButton' id='OrderNowMenu'>Order now</button>
         </div>
     </div>)

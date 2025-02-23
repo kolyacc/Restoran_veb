@@ -1,18 +1,22 @@
 import './Menu.css'
 import { Dishes } from './Dish/Dish'
 import Dish from './Dish/Dish.jsx'
+import { NavLink } from 'react-router-dom'
 
 function Menu() {
 
     return (
     <>
-        <div>
+        <div className='menu'>
           <h1>Our popular menu</h1>
-          <button>All category</button>
-          <button>Dinner</button>
-          <button>Launch</button>
-          <button>Dessert</button>
-          <button>Drink</button>
+          <div className='menu-category'>
+            <button>All category</button>
+            <button>Dinner</button>
+            <button>Launch</button>
+            <button>Dessert</button>
+            <button>Drink</button>
+          </div>
+          
           <div className='dish-container'>
             {Dishes.map((dish)=> (
               <Dish 
@@ -25,10 +29,14 @@ function Menu() {
               />
             ))}
           </div>
-          <div>
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
+          <div className='pagination'>
+            
+            <button className='pag-nav'> {'<'}</button>
+            <button className='pag-numb'>1</button>
+            <button className='pag-numb'>2</button>
+            <button className='pag-numb'>3</button>
+            <h2>•••</h2>
+            <button className='pag-nav'> {'>'}</button>
           </div>
         </div>
     </>
