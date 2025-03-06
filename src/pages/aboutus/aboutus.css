@@ -1,5 +1,87 @@
 .conteiner{ 
     display: flex;
     flex-direction: column;
+    padding: 5%;
+}
+.conteiner p{
+    width: 35%;
+    margin: auto;
+    font-size: 17px;
+    line-height: 40px;
+}
+.conteiner h1{
+    margin: 5% 5% 5% 10%;
+    font-size: 40px;
+    line-height: 50px;
+    
+}
+.conteiner h2{
+    margin-left:32% ;
+    font-size: 30px;
+    line-height: 50px;
+    text-align: left;
+}
+.conteiner span{
+    color : #FF8A00;
+}
+.Our-restaurant{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.Our-restaurant img{
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 0 45px #d0ccc750, 0 0 0 90px #d0ccc713;
+    margin-right: 15%;
+}
+.Our-restaurant p{
+    width: 80%;
+
+}
+
+.Info-About-Us{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    margin-top: 150px;
+}
+
+.Info-About-Us img{
+    
+    border-radius: 50%;
+    box-shadow: 0 0 0 45px #d0ccc750, 0 0 0 90px #d0ccc713;
+}
+
+
+.Owner{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+    padding: 5%;
+}
+.Owner h1{
+    margin-left: 15%;
+    font-size: 55px;
+    letter-spacing : 10px;
+}
+.Owner h2{
+    margin-left: 15%;
+}
+.Owner p{
+    
+    margin-left: 15%;
+    width: 80%;
+    font-size: 20px;
+}
+.Owner img{
+    width: 80%;
+    border-radius: 30px;
     
 }

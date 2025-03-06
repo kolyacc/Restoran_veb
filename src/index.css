@@ -22,6 +22,9 @@ body {
     font-family: 'CustomFont';
 
 }
+main{
+    width: 100vw;
+}
 
 h1 {
     font-size: 1.5em;

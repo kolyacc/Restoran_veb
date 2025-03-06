@@ -23,13 +23,13 @@ function Layon() {
                     <NavLink to = "/" className={setActiveHeader}>Home</NavLink>
                     <NavLink to="/Menu" className={setActiveHeader}>Menu</NavLink>
                     <NavLink to="/Aboutus"className={setActiveHeader}>About us</NavLink>
-                    <NavLink to="/Orderonline" className={setActiveHeader}>Order online</NavLink>
+                    <NavLink to="/OrderOnline" className={setActiveHeader}>Order online</NavLink>
                     <NavLink to="/Reservation" className={setActiveHeader}>Reservation</NavLink>
-                    <NavLink to="/Contact =us" className={setActiveHeader}>Contact us</NavLink>
+                    <NavLink to="/ContactUs" className={setActiveHeader}>Contact us</NavLink>
                 </div>
                 <div className='container'>
-                    <NavLink><img src={basket}></img></NavLink>
-                    <NavLink className="LogInButton">Log in</NavLink>
+                    <NavLink  to="/OrderOnline"><img src={basket}></img></NavLink>
+                    <NavLink to="/Authorization"className="LogInButton">Log in</NavLink>
                 </div>
                 
             </header>
@@ -60,13 +60,13 @@ function Layon() {
                 <h1 className='footerH1'>Page</h1>
                 <NavLink to = "/" className={setActiveFooter}>Home</NavLink>
                 <NavLink to = "/Menu"className={setActiveFooter}> Menu</NavLink>
-                <NavLink to = "/Orderonline"className={setActiveFooter}>Order online</NavLink>
+                <NavLink to = "/OrderOnline"className={setActiveFooter}>Order online</NavLink>
                 <NavLink to = "/Caterin"className={setActiveFooter}>Catering</NavLink>
                 <NavLink to = "/Reservation"className={setActiveFooter}>Reservation</NavLink>
               </div>
               < div className='Information'>
                 <h1 className='footerH1'>Information</h1>
-                <NavLink to = "/Aboutus"className={setActiveFooter}>About us</NavLink>
+                <NavLink to = "/AboutUs"className={setActiveFooter}>About us</NavLink>
                 <NavLink to = "/Testimonial"className={setActiveFooter}>Testimonial</NavLink>
                 <NavLink to = "/Even"className={setActiveFooter}>Event</NavLink>
               </div>
