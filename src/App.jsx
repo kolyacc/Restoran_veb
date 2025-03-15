@@ -10,7 +10,9 @@ import Layon from "./pages/elements/Layout.jsx"
 import Reservation from "./pages/reservation/reservation.jsx"
 import ContactUs from "./pages/ContactUs/ContactUs.jsx"
 import OrderOnline from "./pages/OrderOnline/OrderOnline.jsx"
-import Authorization from "./pages/Authorization/Authorization.jsx"
+import LogIn from "./pages/Authorization/LogIn.jsx"
+import SingUp from "./pages/Authorization/SignUp.jsx"
+import Checkout from "./pages/OrderOnline/Checkout/Checkout.jsx"
 function App(){
     return (
         <>
@@ -23,10 +25,12 @@ function App(){
                 <Route path="/Reservation" element={<Reservation />} /> 
                 <Route path="/ContactUs" element={<ContactUs />} /> 
                 <Route path="/OrderOnline" element={<OrderOnline />} /> 
+                <Route path="/OrderOnline/Checkout" element={<Checkout />} /> 
                 
 
             </Route>
-            <Route path="/Authorization" element={<Authorization />} /> 
+            <Route path="/LogIn" element={<LogIn />} /> 
+            <Route path="/SignUp" element={<SingUp />} /> 
         </Routes>
 
 

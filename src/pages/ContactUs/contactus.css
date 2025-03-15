@@ -1,4 +1,41 @@
-.contact-us{
+.contact-us {
     width: 100vw;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.input-box input {
+    width: 400px;
+    height: 50px;
+    margin: 10px ;
+    border-radius: 5px;
+    border: 1px solid #d0ccc7;
+    background-color:#d0ccc723 ;
+    padding: 5px;
+}
+#email {
+    width: 96%;
+    height: 200px;
+    margin: 20px auto;
+    
+    grid-column: span 2;
+}
+
+form button {
+    width: 200px;
+    height: 50px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.Submit{
+    display: flex;
+    justify-content: center;
 }

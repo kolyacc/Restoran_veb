@@ -11,9 +11,10 @@ import Checkbox from './Elements/Checkbox.svg';
 import People from './Elements/People.svg';
 import Cancel from './Elements/Cancel.svg';
 import Modify from './Elements/Modify.svg';
-const ReservationModalCompleted = ({ active , setActive}) => {
+
+const ReservationModalCancel = ({ active , setActive}) => {
     return (
-        <div className={active===2 ? "modal active":"modal"} onClick={() => setActive(null)}>
+        <div className={active===3 ? "modal active":"modal"} onClick={() => setActive(null)}>
             <div className='modal__content' onClick={(e) => e.stopPropagation()}>
                 <div className='header'> 
                     <div>
@@ -26,12 +27,9 @@ const ReservationModalCompleted = ({ active , setActive}) => {
                         <NavLink to="/SignUp" id='GreenButtonAutor'>Sign up</NavLink>
                     </div>
                 </div>
-                <div className='ReservationModalCompleted'>
+                <div className='ReservationModalCompleted' id='ReservationModalCancel'>
                     <h1>Reservation has beeb confirmed</h1>
-                    <div >
-                            <img src={Checkbox } />
-                            <p>The confirmation result has been sent to your email</p>
-                        </div>
+                    
                         <div>
                             <img src={Date2} />
                             <p>Booking ID : #123456</p>
@@ -56,27 +54,15 @@ const ReservationModalCompleted = ({ active , setActive}) => {
                             
                     </div>
 
-                    <div className='Buttons'>
-                        <button onClick={()=>{setActive(1);}} className='ModifyButton'>Modify <img src={Modify} /></button>
-                        <button onClick={()=>{setActive(3);}} className='CancelButton'>Cancel <img src={Cancel} /></button>
-                
-                    </div>
-               </div>
-               <div>
-               <h2>Restaurant informations</h2>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit 
-                        voluptatem accusantium doloremque laudantium, totam rem aperiam, 
-                        eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae 
-                        vitae dicta sunt explicabo.</p>
-                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, 
-                        consectetur, adipisci velit, sed quia non numquam eius modi tempora 
-                        incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-                        Ut enim ad minima veniam.</p>
-               </div>
+                    
+                </div>
+                <div className='CencelReservation'>
+                    <button onClick={()=>{setActive(null);}}>Cancel reservation</button>
+                </div>
             </div>
             
         </div>
     );
 };
 
-export default ReservationModalCompleted;
+export default ReservationModalCancel;

@@ -65,3 +65,33 @@ button{
     text-align: center;
 }
 
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    padding: 5px;
+    color: #5a422c; /* Коричневий колір тексту */
+}
+.custom-checkbox input {
+    display: none;
+}
+.custom-checkbox label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.custom-checkbox label::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    border: 2px solid #5a422c9f; /* Коричнева рамка */
+    border-radius: 25px;
+    display: inline-block;
+    margin-right: 8px;
+    background-color: white;
+    transition: background-color 0.3s ease;
+}
+
+.custom-checkbox input:checked + label::before {
+    background-color: #5a422c; /* Заповнене коло при виборі */
+}

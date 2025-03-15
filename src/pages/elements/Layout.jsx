@@ -29,7 +29,7 @@ function Layon() {
                 </div>
                 <div className='container'>
                     <NavLink  to="/OrderOnline"><img src={basket}></img></NavLink>
-                    <NavLink to="/Authorization"className="LogInButton">Log in</NavLink>
+                    <NavLink to="/LogIn"className="LogInButton">Log in</NavLink>
                 </div>
                 
             </header>

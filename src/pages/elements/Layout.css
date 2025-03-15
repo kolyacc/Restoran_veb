@@ -49,7 +49,8 @@ header {
   font-weight: 600;
 }
 .LogInButton{
-  background-color: #3fa72f; padding: 15px;
+  background-color: #3fa72f; 
+  padding: 15px;
   border-radius: 30PX;
   width: 100px;
   display: flex;

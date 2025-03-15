@@ -2,6 +2,8 @@ import React from 'react';
 import "./reservation.css";
 import img from "./ReservationPhoto.svg";
 import ReservationModal from './Modal/ReservationModal.jsx';
+import ReservationModalCompleted from './Modal/ReservationModalCompleted.jsx';
+import ReservationModalCancel from './Modal/ReservarionModalCancel.jsx';
 const Reservation = () => {
     const [time, setTime] = React.useState("");
 
@@ -10,7 +12,8 @@ const Reservation = () => {
     };
 
     
-    const [modalActive, setModalActive] = React.useState(false);
+    const [modalActive, setModalActive] = React.useState(null);
+    
     return (
         <div>
             <main className="reservation">
@@ -33,11 +36,15 @@ const Reservation = () => {
                     <option value="large">5+ People</option>
                 </select>
                 
-                <button onClick={()=>setModalActive(true)}>Book now</button>
+                <button onClick={()=>setModalActive(1)}>Book now</button>
             </div>
             
         </main>
+        
+        <ReservationModalCompleted active={modalActive} setActive={setModalActive} />
+        <ReservationModalCancel active={modalActive} setActive={setModalActive} />
         <ReservationModal active={modalActive} setActive={setModalActive} />
+        
         
         </div>
         

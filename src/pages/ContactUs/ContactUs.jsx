@@ -4,20 +4,22 @@ const ContactUs = () => {
     return (
         <div className='contact-us'>
             <h1>Contact Us</h1>
+            <p>We love hearing from our customers. Feel free to share your experience or ask any questions you may have.</p>
             <form>
-                <div>
-                    <label htmlFor="name">Name:</label>
-                    <input type="text" id="name" name="name" required />
+                <div className='input-box'>
+                    <input type="text" id="name" placeholder="First name"/>
+                    <input type="text" id="name" placeholder="Last name"/>
+                    <input type="text" id="name" placeholder="Email address"/>
+                    <input type="text" id="name" placeholder="Subect"/>
                 </div>
-                <div>
-                    <label htmlFor="email">Email:</label>
-                    <input type="email" id="email" name="email" required />
+                <div className='input-box' id='message'>
+                    
+                    <input type="email" id="email" placeholder="Massege"/>
                 </div>
-                <div>
-                    <label htmlFor="message">Message:</label>
-                    <textarea id="message" name="message" required></textarea>
+                <div className='Submit'>
+                    <button >Submit</button>
                 </div>
-                <button type="submit">Submit</button>
+                
             </form>
         </div>
     );

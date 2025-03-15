@@ -9,10 +9,9 @@ const Authorization = () => {
             <div id='Authorization'>
                 <NavLink to='/'><img src={crown} className='LogoHeader'/></NavLink>
                 <div className='Authorization__form'>
-                    <h1>Sign up</h1>
-                    <p>Already have an account? <NavLink>Log in</NavLink></p>
-                    <h3>Full name</h3>
-                    <input type="text" placeholder="Full name"/>
+                    <h1>Login</h1>
+                    <p>Don`t have an account? <NavLink to="/SignUp">Sing up</NavLink></p>
+                    
                     <h3>Email address</h3>
                     <input type="email" placeholder="Email address"/>
                     <h3>Password</h3>
@@ -30,7 +29,7 @@ const Authorization = () => {
                     </div>
                     
                     
-                    <button>Sign up</button>
+                    <button>Log in</button>
                 </div>
             </div>
             <img src={Background} />
