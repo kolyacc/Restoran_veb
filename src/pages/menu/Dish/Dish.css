@@ -1,6 +1,6 @@
 
 .dish {
-    width: 17rem;
+    max-width:  17rem;
     text-align: center;
     border-radius: 55px;
     padding: 0.5rem;
@@ -8,7 +8,7 @@
 }
 
 .dish-img {
-    width: 60%;
+    max-width:  60%;
     margin: 0 auto;
     filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
 }

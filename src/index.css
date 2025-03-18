@@ -70,10 +70,11 @@ button{
     align-items: center;
     font-size: 16px;
     padding: 5px;
-    color: #5a422c; /* Коричневий колір тексту */
+    color: #5a422c; 
 }
 .custom-checkbox input {
     display: none;
+    
 }
 .custom-checkbox label {
     display: flex;
@@ -82,16 +83,17 @@ button{
 }
 .custom-checkbox label::before {
     content: "";
-    width: 16px;
+    min-width: 16px;
     height: 16px;
-    border: 2px solid #5a422c9f; /* Коричнева рамка */
+    border: 3px solid #f0f8ff; /* Коричнева рамка */
     border-radius: 25px;
     display: inline-block;
     margin-right: 8px;
-    background-color: white;
+    background-color: #f0f8ff;
+    box-shadow: 0 0 0 2px #d0ccc7;
     transition: background-color 0.3s ease;
 }
 
 .custom-checkbox input:checked + label::before {
-    background-color: #5a422c; /* Заповнене коло при виборі */
+    background-color: #bebdba; /* Заповнене коло при виборі */
 }

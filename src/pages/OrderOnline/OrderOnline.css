@@ -1,0 +1,89 @@
+.OrderOnline{
+    margin: 50px 0;
+}
+#OrderOnline{
+    display: flex;
+    justify-content: flex-start;
+    width: 70vw;
+}
+.dish-containerOrder{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 3rem;
+    row-gap: 3rem;
+    max-width: 68%;
+    margin: 0 0 0 5%;
+}
+.OrderOnline-container{
+    display: flex;
+}
+.container-Menu{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+.container-Menu h1{
+    font-size: 2em;
+    height: 50px;
+}
+.Order-list-container{
+    background-color: #fafaf9 ;
+    padding: 20px;
+}
+.Order-list{
+    display: flex;
+    background-color: #512982;
+    justify-content: center;
+    border-radius: 15px;
+}
+.Order-list h1{
+    color: white;
+    
+    margin: 15px auto;
+}
+.Order-list-total div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+.Order-list-total h3{
+    font-size: 1.3em;
+    color: #ff8a00;
+}
+#Checkout{
+    display: flex;
+    justify-content: center;
+    margin: 20px 5px;
+    padding: 10px;
+    background-color: #3FC66E;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+}
+.Order-list-voucher div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+.Order-list-voucher button{
+    background-color:#53A5E0;
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    margin-left: 10px;
+    font-size: 2em;
+}
+.Order-list-voucher input{
+    
+    height: 50px;
+    color: #53A5E0;
+    font-size: 1.2em;
+    border-radius: 15px;
+    padding-left: 10px;
+    border: 1px solid #d0ccc7;
+    background-color:#d0ccc723 ;
+    
+}
