@@ -6,6 +6,7 @@
     font-family: 'CustomFont-Medium'; 
     src: url('.\assets\Fonts\Poppins-Light-Medium.ttf');
 }
+
 :root {
     line-height: 1.5;
     font-weight: 2;
@@ -22,8 +23,8 @@ body {
     font-family: 'CustomFont';
 
 }
-main{
-    width: 100vw;
+html, body {
+    overflow-x: hidden;
 }
 
 h1 {

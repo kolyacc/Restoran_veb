@@ -1,32 +1,19 @@
 import React from 'react';
-import Menu from '../menu/Menu.jsx'
+
 import './OrderOnline.css';
 import { NavLink } from 'react-router-dom';
-import { Dishes } from '../menu/Dish/Dish'
+
 import Dish from '../menu/Dish/Dish.jsx'
+import MenuCategory from '../menu/MenuCategory/MenuCategory.jsx';
 const OrderOnline = () => {
     return (
         <div className='OrderOnline'>
             <div className='container-Menu'><h1>Menu</h1></div>
-            <div className='menu-category'>
-                <button>All category</button>
-                <button>Dinner</button>
-                <button>Launch</button>
-                <button>Dessert</button>
-                <button>Drink</button>
-            </div>
+            <MenuCategory />
             <div className='OrderOnline-container'>
             <div className='dish-containerOrder' id='OrderOnline'>
-                {Dishes.map((dish)=> (
-                <Dish 
-                    key = {dish.id}
-                    title = {dish.title} 
-                    rating = {dish.rating}
-                    description = {dish.description} 
-                    price = {dish.price}
-                    DishImg ={dish.dishImg} 
-                />
-                ))}
+                
+            <Dish />
             </div>
             <div className='Order-list-container'>
                 <div className='Order-list'><h1>Order list</h1></div>

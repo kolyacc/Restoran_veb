@@ -16,7 +16,7 @@ const Reservation = () => {
     
     return (
         <div>
-            <main className="reservation">
+            <div className="reservation">
             <img src={img} alt="Reservation" />
             <div>
                 <h2>Book a table</h2>
@@ -39,7 +39,7 @@ const Reservation = () => {
                 <button onClick={()=>setModalActive(1)}>Book now</button>
             </div>
             
-        </main>
+        </div>
         
         <ReservationModalCompleted active={modalActive} setActive={setModalActive} />
         <ReservationModalCancel active={modalActive} setActive={setModalActive} />
