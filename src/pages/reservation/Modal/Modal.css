@@ -1,5 +1,5 @@
 .modal{
-    height: 131.2%;
+    height: calc(100vh + 182px);
     width: 100vw;
     padding-top: 100px;
     background-color: rgba(0, 0, 0, 0.5);
@@ -26,6 +26,7 @@
     overflow-y: auto;
     width: 850px;
     max-height:800px;
+    margin-bottom: 19vh;
 }
 .header{
     display: flex;
@@ -84,6 +85,13 @@
     border: 1px solid #d0ccc7;
 }
 
+#CompleteReservation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: auto;
+    max-height: 100px;
+}
 
 .content__order button{
     height: 50px;

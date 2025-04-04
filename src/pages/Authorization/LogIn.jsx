@@ -32,7 +32,7 @@ const Authorization = () => {
                     <button>Log in</button>
                 </div>
             </div>
-            <img src={Background} />
+            <img className='BackgroundAutorixation'src={Background} />
         </div>
     );
 };

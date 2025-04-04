@@ -12,6 +12,9 @@
   
   max-width: 50%;
 }
+.ItalianCuisitePasta{
+  width: 50vw;
+}
 @media (max-width: 767px){
   .ItalianCuisite{
     flex-direction: column;
@@ -57,11 +60,24 @@
   display: flex;
   
 }
-.ItalianCuisiteButton button {
+.ReservationGreenButton{
+  
+  background-color: #3FA72F;
+}
+  .ReservationGreenButton:hover{
+    background-color: #3fa72fac;
+}
+
+.ItalianCuisiteButton a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.2rem;
     height: 50px;
     width: 200px;
     border-radius: 30px;
-    background-color: #ff8a00;
+    text-decoration: none;
     margin: 5%;
 }
 
@@ -96,7 +112,7 @@
   line-height: 1.6em;
   word-spacing: 3px;
 }
-.VelcomToDeliziosoText button{
+.VelcomToDeliziosoText a{
   height: 50px;
   width: 200px;
   border-radius: 30px;
@@ -106,14 +122,19 @@
 
 @media (max-width: 767px){
   .VelcomToDelizioso{
+    display: flex;
+    justify-content: center;
     flex-direction: column;
+    width: 100vw;
+    padding: 0;
   }
   .VelcomToDeliziosoText{
-    
-    width: 100%;
+    margin: auto;
+    width: 80%;
   }
   .VelcomToDeliziosoSalad{
-    width: 95%;
+    margin: auto;
+    width: 80%;
   }
 }
 /*ReservationBlock*/
@@ -125,8 +146,17 @@
 }
 @media (max-width: 767px){
   #ReservationBlock{
+    display: flex ;
     flex-direction: column-reverse;
+    align-items: center;
+    padding: 0; 
+    margin: 0;
   }
+  .ReservationImgBlock{
+    width: 80%;
+  }
+  
+
 }
 
 .ReservationTextBlock{
@@ -176,8 +206,8 @@
 #ReservationImg2{
   object-fit: cover;
   border-radius: 100%;
-  width: 20em;
-  height: 20em;
+  width: 35vw;
+  height: 35vw;
   margin-left: 10vh;
   margin-right: 10vh;
   box-shadow: 0 0 0 35px #f9f0e4,0 0 0 120px #fffbf5, 0 0 0 121px #ede8e0;
@@ -207,15 +237,19 @@
     width:  18vh;
     height: 25vh;
     border-radius: 25px;
-    margin: 0;
+    margin: 25px;
   }
   .ChefContainer{
-    
+    width: 100vw;
     display: flex;
-    padding: 5vh;
+    align-items: center;
+    padding: 0;
+    
+    margin: auto;
 
 
   }
+  
 }
 
 #chef1{
@@ -231,7 +265,8 @@
 }
 
 #ChefAllVive{
-  margin-top: 100px;
+  
+  margin: 100px auto 50px auto;
 }
 .ChefText{
   font-size: 3rem;
@@ -258,6 +293,10 @@
 }
 
 @media (max-width: 767px){
+  #PeopleBlock{
+    width: 100vw;
+    margin: 0 ;
+  }
   #peopleImg1,#peopleImg6{
     
     display: none;
@@ -346,13 +385,27 @@
   font-size: 150%;
   color: #ffffff;
 }
-
+.OpeningHoursCard div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
 .ReservationButton{
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.2rem;
+  text-decoration: none;
   margin: 5%;
   height: 50px;
   width: 200px;
   border-radius: 30px;
   background-color: #f2f2f2;
   color: black;
+  margin-top: 1%;
+}
+.ReservationButton:hover{
+  background-color: #f2f2f2ac;
 }

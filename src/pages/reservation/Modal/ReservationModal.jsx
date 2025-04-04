@@ -44,7 +44,7 @@ const ReservationModal = ({ active , setActive}) => {
                         </label>
                     </div>
                     
-                    <button onClick={()=>{setActive(2);}}>Complete reservation</button>
+                    <button id='CompleteReservation'onClick={()=>{setActive(2);}}>Complete reservation</button>
                 </div>
                 <div className='modal__content__details'>
                     <div className='modal__content__details__info'>

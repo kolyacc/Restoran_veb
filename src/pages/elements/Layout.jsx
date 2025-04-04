@@ -5,35 +5,62 @@ import king from '../../assets/king.png'
 import crown from '../../assets/crown.svg'
 import basket from '../../assets/basket.svg'
 import twitter from '../../assets/twitter.png'
+import BurgerMenu from './BurgerMenu.svg'
 import './Layout.css'
+import React, { useState } from 'react';
 
 
 const setActiveFooter = ({isActive}) => isActive ? 'activeFooter' : 'footerButton';
 const setActiveHeader = ({isActive}) => isActive ? 'activeHeader' : 'headerButton';
+
+
 function Layon() {
+    const [burgerActive, setBurgerActive] = React.useState(false);
     return (
         <>
-            <header className='container'>
+            <header >
+                <div className='container 'id='Header'>
+                    <div className='Logo-Header'>
+                        <NavLink to = "/"><img src={crown} className='LogoHeader'></img></NavLink>
+                        <NavLink to = "/" className='LogoNameHeader'><h1 className='LogoNameHeader'>Delizi<span>oso</span></h1></NavLink>
+                        
+                    </div>
+                  
+                    <div className='Buttons-Header'>
+                        <NavLink to = "/" className={setActiveHeader}>Home</NavLink>
+                        <NavLink to="/Menu" className={setActiveHeader}>Menu</NavLink>
+                        <NavLink to="/Aboutus"className={setActiveHeader}>About us</NavLink>
+                        <NavLink to="/OrderOnline" className={setActiveHeader}>Order online</NavLink>
+                        <NavLink to="/Reservation" className={setActiveHeader}>Reservation</NavLink>
+                        <NavLink to="/ContactUs" className={setActiveHeader}>Contact us</NavLink>
+                    </div>
+                    <div className='Buttons-Header'>
+                        <NavLink  to="/OrderOnline"><img src={basket}></img></NavLink>
+                        <NavLink to="/LogIn"className="LogInButton">Log in</NavLink>
+                    </div>
+                </div>
                 
-                <div className='container'>
-                    <img src={crown} className='LogoHeader'></img>
-                    <h1 className='LogoNameHeader'>Delizi<span>oso</span></h1>
+                
+                <div className='Burger-Menu-Header'> 
+                  <NavLink  to="/OrderOnline"><img src={basket}></img></NavLink>
+                  <button onClick={()=>setBurgerActive(true)}><img src={BurgerMenu}></img></button>
                 </div>
-                <div className='container'>
-                    <NavLink to = "/" className={setActiveHeader}>Home</NavLink>
-                    <NavLink to="/Menu" className={setActiveHeader}>Menu</NavLink>
-                    <NavLink to="/Aboutus"className={setActiveHeader}>About us</NavLink>
-                    <NavLink to="/OrderOnline" className={setActiveHeader}>Order online</NavLink>
-                    <NavLink to="/Reservation" className={setActiveHeader}>Reservation</NavLink>
-                    <NavLink to="/ContactUs" className={setActiveHeader}>Contact us</NavLink>
-                </div>
-                <div className='container'>
-                    <NavLink  to="/OrderOnline"><img src={basket}></img></NavLink>
-                    <NavLink to="/LogIn"className="LogInButton">Log in</NavLink>
+                
+                <div className={burgerActive ? "Burger-Menu active":"Burger-Menu"}>
+                  <button onClick={()=>setBurgerActive(false)}>X</button>
+                  <div>
+                    <NavLink to = "/" className={setActiveHeader} onClick={()=>setBurgerActive(false)}>Home</NavLink>
+                    <NavLink to="/Menu" className={setActiveHeader} onClick={()=>setBurgerActive(false)}>Menu</NavLink>
+                    <NavLink to="/Aboutus"className={setActiveHeader} onClick={()=>setBurgerActive(false)}>About us</NavLink>
+                    <NavLink to="/OrderOnline" className={setActiveHeader} onClick={()=>setBurgerActive(false)}>Order online</NavLink>
+                    <NavLink to="/Reservation" className={setActiveHeader} onClick={()=>setBurgerActive(false)}>Reservation</NavLink>
+                    <NavLink to="/ContactUs" className={setActiveHeader} onClick={()=>setBurgerActive(false)}>Contact us</NavLink>
+                    <NavLink to="/LogIn"className={setActiveHeader} onClick={()=>setBurgerActive(false)}>Log in</NavLink>
+                  </div>
                 </div>
                 
             </header>
-    
+            
             <main>
             <Outlet />
             </main>

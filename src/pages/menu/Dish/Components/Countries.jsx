@@ -18,7 +18,7 @@ const Countries = ({ countries,loading }) => {
                         <p>{country.description}</p>
                         <div className='dish-footer'>
                             <h2>${country.price}</h2>
-                            <button className='OrengeButton' id='OrderNowMenu'>Order now</button>
+                            <button  id='OrderNowMenu'></button>
                         </div>
                     </div>
                 ))

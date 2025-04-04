@@ -33,7 +33,7 @@ const Authorization = () => {
                     <button>Sign up</button>
                 </div>
             </div>
-            <img src={Background} />
+            <img className='BackgroundAutorixation' src={Background} />
         </div>
     );
 };

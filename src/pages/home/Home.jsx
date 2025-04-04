@@ -19,6 +19,7 @@ import ReservationImg3 from '../../assets/ReservationImg/ReservationImg3.png'
 import './Home.css'
 
 import Menu from '../menu/Menu.jsx'
+import { NavLink } from 'react-router-dom'
 
 function Home() {
 
@@ -36,8 +37,8 @@ function Home() {
                 donec eget.
             </p>
             <div className='ItalianCuisiteButton'>
-              <button >Order now</button>
-              <button  style={{ backgroundColor: '#3FA72F' }}>Reservation</button>
+              <NavLink className='OrengeButton' to="/OrderOnline">Order now</NavLink>
+              <NavLink  className='ReservationGreenButton' to="/Reservation">Reservation</NavLink>
 
             </div>
           </div>
@@ -55,7 +56,7 @@ function Home() {
                 ultricies nec quam
             </p>
             <div>
-              <button>Sea our menu</button>
+              <NavLink className='OrengeButton' to="/Menu">Sea our menu</NavLink>
             </div>
           </div>
           <div>
@@ -78,7 +79,7 @@ function Home() {
                 proin. Congue nibh nulla malesuada
                 ultricies nec quam
             </h2>
-            <div id='ReservationButton'><button className='OrengeButton'>Reservation</button></div>
+            <div id='ReservationButton'><NavLink className='OrengeButton' to="/Reservation">Reservation</NavLink></div>
             
           </div>
           
@@ -130,8 +131,11 @@ function Home() {
             <h2 className='OpeningHoursCardTexth2'>Monday - Sunday</h2>
             <p className='OpeningHoursCardTextp'>Launch : Mon-Sun : 11:00am-02:00pm</p>
             <p className='OpeningHoursCardTextp'>Dinner : sunday : 04:00pm-08:00pm</p>
-            <button className='OrengeButton'>Order now</button>
-            <button className='ReservationButton'>Reservation</button>
+            <div>
+            <NavLink className='OrengeButton' to="/OrderOnline" >Order now</NavLink>
+            <NavLink className='ReservationButton' to="/Reservation">Reservation</NavLink>
+            </div>
+            
           </div>
         </div>
         

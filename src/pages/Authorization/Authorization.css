@@ -8,6 +8,19 @@
     padding-left: 5px;
     width: 50vw;
 }
+@media  (max-width: 767px){
+    .BackgroundAutorixation{
+        display: none;
+    }
+    #Authorization{
+        
+        width: 100vw;
+    }
+    .Authorization__form{
+        padding: 0 15% 15% 15% ;
+    }
+}
+
 .Authorization__form {
     display: flex;
     flex-direction: column;

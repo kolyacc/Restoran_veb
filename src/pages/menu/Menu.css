@@ -16,15 +16,32 @@
     justify-content: center;
     column-gap: 3rem;
     row-gap: 3rem;
-    max-width: 68vw;
+    max-width: 82vw;
     margin: 0 auto;
   }
+#OrderNowMenu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FF8A00;
+  color: #fafaf9;
+  width: 150px;
+  height: 50px;
+  border-radius: 30px;
+  font-weight: bold;
+  
+}
+#OrderNowMenu::before{
+  content: "Order Now";
+  
+}
 
 .menu-category {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 3rem;
+    width: 100vw;
   }
 
   .menu-categoryButton {
@@ -34,7 +51,7 @@
     background-color: #fafaf9;
     color: #311F09;
     font-weight: bold;
-    margin-left: 30px;
+    margin:0 15px;
   }
   .menu-categoryActiveButton{
     height: 50px;
@@ -43,13 +60,41 @@
     background-color: #311F09;
     color: #fafaf9;
     font-weight: bold;
-    margin-left: 30px;
+    margin:0 15px;
   }
   .menu-category button:hover {
     background-color: #311F09;
     color: #fafaf9;
   }
-
+@media  (max-width: 767px){
+    .dish-container{
+      max-width: 95vw;
+      column-gap: 2rem;
+    }
+    #OrderNowMenu::before{
+      content: "+";
+      
+    }
+    #OrderNowMenu{
+      width: 50px;
+      
+    }
+    .menu-category{
+      width: 100vw;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .menu-categoryButton{
+      width: 150px;
+      height: 50px;
+      margin-top: 20px;
+    }
+    .menu-categoryActiveButton{
+      margin-top: 20px;
+      width: 150px;
+      height: 50px;
+    }
+  }
 .pagination{
   display: flex;
   justify-content: center;

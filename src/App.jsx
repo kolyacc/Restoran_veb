@@ -13,6 +13,7 @@ import OrderOnline from "./pages/OrderOnline/OrderOnline.jsx"
 import LogIn from "./pages/Authorization/LogIn.jsx"
 import SingUp from "./pages/Authorization/SignUp.jsx"
 import Checkout from "./pages/OrderOnline/Checkout/Checkout.jsx"
+import OrderList from "./pages/OrderOnline/OrderList.jsx"
 function App(){
     return (
         <>
@@ -26,6 +27,7 @@ function App(){
                 <Route path="/ContactUs" element={<ContactUs />} /> 
                 <Route path="/OrderOnline" element={<OrderOnline />} /> 
                 <Route path="/OrderOnline/Checkout" element={<Checkout />} /> 
+                <Route path="/OrderOnline/OrderNow" element={<OrderList />} /> 
                 
 
             </Route>

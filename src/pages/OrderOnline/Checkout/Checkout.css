@@ -9,8 +9,8 @@
 }
 .checkout-header a{
     background-color: #311F09;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     display: flex   ;
     justify-content: center;
     align-items: center;
@@ -59,7 +59,7 @@
     ;
 }
 .checkout-data input{
-    width: 40%;
+    width: 21.5vw;
     height: 70px;
     
     padding: 0 20px ;
@@ -135,13 +135,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    height: 200px;
+    height: 100%;
     
     
     
 }
 .payment-method label {
-    min-width: 350px;
+   max-width: 250px;
     height: 50px;
     background-color:#bebdba46 ;
     padding: 10px 20px;
@@ -149,7 +149,41 @@
     border-radius: 15px;
     
 }
-
+@media (max-width: 768px) {
+    .checkout {
+        padding: 0 10%;
+    }
+    .checkout-header div {
+        margin-left: 20%;
+    }
+    .checkout-address input, 
+    .checkout-address button, 
+    .checkout-data input {
+        width: 100%;
+        margin-right: 0;
+    }
+    .checkout-data{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 570px;
+        
+    }
+    .checkout-address button {
+        width: 100%;
+    }
+    .payment-method{
+        height: 100%;
+    }
+    .payment-method label {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .Order-Now button {
+        width: 100%;
+    }
+}
+    
 
 
 

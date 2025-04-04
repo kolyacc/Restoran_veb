@@ -33,6 +33,7 @@ h1 {
     color: #311F09;
 }
 
+
 p{
     font-size: 1em;
     line-height: 1.1;
@@ -55,13 +56,23 @@ button{
     width: 200px;
     border-radius: 30px;
     background-color: #ff8a00;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.2rem;
+}
+.OrengeButton:hover{
+    background-color: #ff8800ac;
+    
 }
 
 .block{
     height: auto;
-    width: 100%;
+    width: 100vw;
     
-    margin: 0 auto;
+    
   
     text-align: center;
 }
@@ -81,6 +92,7 @@ button{
     display: flex;
     align-items: center;
     cursor: pointer;
+    margin-bottom: 10px;
 }
 .custom-checkbox label::before {
     content: "";

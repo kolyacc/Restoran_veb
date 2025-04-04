@@ -17,26 +17,28 @@ const Reservation = () => {
     return (
         <div>
             <div className="reservation">
-            <img src={img} alt="Reservation" />
-            <div>
-                <h2>Book a table</h2>
-                <input type="date" id="date" />
-                
-                <input 
-                    type="time" 
-                    id="time" 
-                    value={time} 
-                    onChange={handleTimeChange} 
-                />
-                
-                <select id="party-size">
-                    <option value="" disabled selected>Party size</option>
-                    <option value="small">1-2 People</option>
-                    <option value="medium">3-4 People</option>
-                    <option value="large">5+ People</option>
-                </select>
-                
-                <button onClick={()=>setModalActive(1)}>Book now</button>
+                <img src={img} />
+                <div>
+                    <h2>Book a table</h2>
+                    <label for="date">Date</label>
+                    <input type="date" id="date" />
+                    <label for="time">Time</label>
+                    <input 
+                        type="time" 
+                        id="time" 
+                        value={time} 
+                        onChange={handleTimeChange} 
+                    />
+                    <label for="party-size">Party size</label>
+                    <select id="party-size">
+                        
+                        
+                        <option value="small">1-2 People</option>
+                        <option value="medium">3-4 People</option>
+                        <option value="large">5+ People</option>
+                    </select>
+                    
+                    <button onClick={()=>setModalActive(1)}>Book now</button>
             </div>
             
         </div>

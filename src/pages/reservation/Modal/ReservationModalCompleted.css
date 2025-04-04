@@ -32,6 +32,9 @@
     display: flex;
     justify-content: space-evenly;
 }
+
+    
+
 .Buttons{
     display: flex;
     flex-direction: column;
@@ -61,7 +64,22 @@
     box-shadow: 0 0 0 20px #d0ccc752, 0 0 0 40px #d0ccc72b;
 
 }
-
+@media (max-width: 768px) {
+    .modal__ReservationCompleted{
+        display: flex;
+        flex-direction: column;
+    }
+    #ReservationCompletedImg{
+        display: none;
+    }
+    .Buttons{
+        display: flex;
+        justify-content: space-between;
+        flex-direction:row;
+        align-items: center;
+        padding: 20px 10px ;
+    }
+}
 
 /*Reservation Cancel*/
 #ReservationModalCancel{

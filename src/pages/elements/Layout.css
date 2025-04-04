@@ -1,7 +1,83 @@
 header {
   
-  margin: 30px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  
+  
 }
+#Header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px ;
+  width: 100%;
+  
+  
+  
+}
+.Buttons-Header{
+  display: flex;
+  
+  justify-content: space-evenly;
+  align-items: center;
+}
+.Burger-Menu {
+  
+  background-color: #f2f2f2d1;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 9999;
+  overflow: hidden;
+
+  opacity: 0;
+  pointer-events: none;
+}
+.Burger-Menu.active{
+  opacity: 1;
+  pointer-events: all;
+}
+.Burger-Menu a{
+ margin: 10px auto;
+}
+.Burger-Menu button{
+  width: 40px ;
+  height: 40px;
+  border: none;
+  background-color:rgb(49, 31, 9);
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+.Burger-Menu-Header{
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+}
+.Burger-Menu-Header button{
+  padding-top:  5px;
+  border: none;
+  background-color: transparent;
+  
+  margin-left: 20px;
+
+
+}
+.Burger-Menu div {
+  display: flex;
+  flex-direction: column;
+  
+
+}
+
+
 .container{
   display: flex;
   justify-content: space-evenly;
@@ -10,11 +86,29 @@ header {
 .container a{
   margin: 0 15px 0 15px;
 }
-@media (max-width: 767px){
-  .container{
-    display: grid;
-    
+@media (max-width: 1000px){
+  
+  header {
+    width: 100vw;
+    padding: 0;
+    margin: 0 ;
+    display: flex;
+    justify-content: space-between;
   }
+  .Burger-Menu-Header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+  }
+  
+
+  
+
+  .Buttons-Header{
+    display: none;
+  }
+  
   
 }
 .LogoHeader{
@@ -25,15 +119,28 @@ header {
   border-radius: 50%;
   padding: 5px;
   margin-right: 20px;
+  margin-left: 20px;
+}
+.Logo-Header{
+  display: flex;
+  
+  align-items: center;
+}
+.Logo-Header a{
+  margin:   0;
+
 }
 .LogoNameHeader {
   color:rgb(49, 31, 9) ;
   font-size: 1rem;
-  margin-top: 12px;
-  margin-bottom: 35p;
+  
+ 
+  
+  text-decoration: none;
 }
 .LogoNameHeader span{
-  color:#ff8a00
+  color:#ff8a00;
+  text-decoration: none;
 }
 .headerButton{
   color :rgb(49, 31, 9);
@@ -41,6 +148,9 @@ header {
   text-decoration: none;
   font-size: 1.0rem;
   font-weight: 600;
+}
+.headerButton:hover{
+  color: #ff8a00;
 }
 .activeHeader{
   color: #ff8a00;
@@ -60,6 +170,9 @@ header {
   text-decoration: none;
   font-weight: 600;
   color: white;
+}
+.LogInButton:hover{
+  background-color: #3fa72fac;
 }
 /*Footer*/
 footer{
@@ -83,6 +196,7 @@ footer{
     footer {
       display: flex; /* Переключаем на вертикальное расположение */
       flex-direction: column;
+      width: 100vw;
     }
     .Info{
       max-width: 500px;

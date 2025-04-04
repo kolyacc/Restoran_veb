@@ -3,6 +3,7 @@
     flex-direction: column;
     padding: 5%;
 }
+
 .conteiner p{
     width: 35%;
     margin: auto;
@@ -84,4 +85,57 @@
     width: 80%;
     border-radius: 30px;
     
+}
+
+
+@media (max-width: 768px) {
+    .conteiner h1{
+        margin:  0 50px;
+    }
+    .conteiner p{
+        margin-top: 50px  ;
+        margin-bottom: 50px  ;
+    }
+    .Info-About-Us{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .Info-About-Us p{
+        width: 80%;
+    }
+    .Info-About-Us img{
+        margin-bottom: 100px;
+    }
+    .Owner{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0;
+        padding: 0;
+    }
+    .Owner h1{
+        margin-left: 40px;
+        
+    }
+    .Owner h2{
+        margin-left: 40px;
+    }
+    .Owner p{
+        margin-left: 40px;
+        width: 80%;
+    }
+    .Our-restaurant{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .conteiner img{
+        margin: 30px;
+        width: 70%;
+    }
+    .conteiner div{
+        margin-top:50px;
+    }
 }
