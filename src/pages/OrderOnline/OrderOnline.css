@@ -1,0 +1,156 @@
+.OrderOnline{
+    margin: 50px 0 0 0;
+}
+#OrderOnline{
+    display: flex;
+    justify-content: flex-start;
+    width: 70vw;
+}
+.dish-containerOrder{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.OrderOnline-container{
+    display: flex;
+}
+.container-Menu{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+.container-Menu h1{
+    font-size: 2em;
+    height: 50px;
+}
+.Order-list-container{
+    background-color: #fafaf9 ;
+    padding: 20px;
+}
+.Order-list{
+    display: flex;
+    background-color: #512982;
+    justify-content: center;
+    border-radius: 15px;
+}
+.Order-list a{
+    width: 35px;
+    height: 35px;
+    color: #512982;
+    background-color: #fafaf9;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 50px;
+    margin: auto 0 auto 15px;
+    font-size: 1.7rem;
+}
+.Order-list h1{
+    color: white;
+    
+    margin: 15px auto;
+}
+.Order-list-total div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+.Order-list-total h3{
+    font-size: 1.3em;
+    color: #ff8a00;
+}
+#Checkout{
+    display: flex;
+    justify-content: center;
+    margin: 20px 5px;
+    padding: 10px;
+    background-color: #3FC66E;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+}
+.Order-list-voucher div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+.Order-list-voucher button{
+    background-color:#53A5E0;
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    margin-left: 10px;
+    font-size: 2em;
+}
+.Order-list-voucher input{
+    max-width: 200px;
+    height: 50px;
+    color: #53A5E0;
+    font-size: 1.2em;
+    border-radius: 15px;
+    padding-left: 10px;
+    border: 1px solid #d0ccc7;
+    background-color:#d0ccc723 ;
+    
+}
+.PhoneVershinOrder{
+    display: none;
+    justify-content: space-between;
+    padding: 20px;
+}
+.PhoneVershinOrder div{
+    
+    display: flex;
+    flex-direction: column;
+}
+.PhoneVershinOrder h2{
+    margin: 0;
+    font-size: 1em;
+}
+.PhoneVershinOrder h3{
+    margin: 0;
+    font-size: 1.3em;
+    color: #ff8a00;
+}
+.PhoneVershinOrder a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    padding: auto;
+    width: 200px;
+    height: 50px;
+    border-radius: 15px;
+    background-color: #3FC66E;
+}
+@media (max-width: 1000px) {
+    .OrderPhone{
+        display: none;
+    }
+    #OrderOnline{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        margin: auto;
+    }
+    .PhoneVershinOrder{
+        display: flex;
+    }
+    .Order-list{
+        
+        align-items: center;
+        
+    }
+    .Order-list h1{
+        margin: 30px auto ;
+    }
+    .Order-list a{
+        display: flex;
+    }
+}

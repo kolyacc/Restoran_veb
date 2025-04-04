@@ -1,0 +1,119 @@
+.modal{
+    height: calc(100vh + 182px);
+    width: 100vw;
+    padding-top: 100px;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    position:absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.modal.active{
+    opacity: 1;
+    pointer-events: all;
+
+}
+.modal__content{
+    padding: 20px;
+    border-radius: 12px;
+    background-color: aliceblue;
+    overflow-y: auto;
+    width: 850px;
+    max-height:800px;
+    margin-bottom: 19vh;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    
+}.content__order{
+    display: flex;
+    align-items: flex-start;
+}
+.header div{
+    display: flex;
+    align-items: center;
+}
+
+.header a{
+    border-radius: 25px;
+    padding: 10px 20px 10px 20px;
+    background-color: #FF8A00;
+    margin: 5px;
+    color:azure;
+    text-decoration: none;
+}
+#GreenButtonAutor{
+    background-color: #3fa72f;
+}
+
+.modal__content__header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+.modal__content__header p{
+    background-color: rgba(0, 255, 255, 0.218);
+    padding: 20px;
+    border-radius: 15px;
+}
+.modal__content__header p span{
+    font-weight: bold;
+}
+
+.modal__content__inputs{
+    display: flex;
+    width: 45%;
+    
+    flex-direction: column;
+    margin-right: 20px;
+}
+.modal__content__inputs input{
+    height: 30px;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #d0ccc7;
+}
+
+#CompleteReservation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: auto;
+    max-height: 100px;
+}
+
+.content__order button{
+    height: 50px;
+    margin: 10px;
+}
+.modal__content__details{
+    width: 50%;
+}
+
+.modal__content__details__info{
+    border-radius: 25px;
+    padding: 2px;
+    background-color: #d0ccc72c ;
+    padding-left: 15px;
+}
+.modal__content__details__info div{
+    display: flex;
+    
+}
+
+.modal__content__details__info img{
+    margin-right:10px;
+}
+
+

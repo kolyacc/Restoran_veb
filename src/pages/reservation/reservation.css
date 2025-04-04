@@ -1,0 +1,90 @@
+.reservation {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+    padding: 50px;
+    
+    
+    background-color: #fff;
+    margin-bottom: 200px;
+    margin-top: 100px;
+    
+}
+
+.reservation div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-left: 15%;
+}
+
+.reservation h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #3D2601;
+}
+
+.reservation input,
+#party-size {
+    width: 30vw;
+    height: 60px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #F9F9F9;
+}
+#party-size{
+    width: 30vw;
+}
+
+.reservation button {
+    width: 30vw;
+    padding: 15px;
+    background-color: #FF8500;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    
+}
+
+.reservation button:hover {
+    background-color: #E67300;
+}
+
+.reservation img {
+    width: 30vw;
+    height: 30vw;
+    object-fit: cover;
+    border-radius: 50%;
+    
+    box-shadow: 0 0 0 30px #d0ccc752, 0 0 0 60px #d0ccc72b;
+}
+@media (max-width: 767px) {
+    .reservation img {
+        display: none;
+    }
+    .reservation {
+        margin: 50px 0;
+        display: flex;
+        height: 100vh;
+        
+        
+        padding: auto;
+    }
+    
+    .reservation button,#party-size{
+        width: 51vw;
+        margin-bottom: 20px;
+    }
+    .reservation input{
+        width: 50vw;
+        
+    }
+    .reservation h1{
+        margin: auto;
+    }
+}

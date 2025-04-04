@@ -1,49 +1,142 @@
-.group:after {
-  content: "";
-  display: table;
-  clear: both;
-  
-}
 
-.text {
-  float: left;
-  width: 50%;
-}
-
-.images {
-  float: left;
-  width: 50%;
-}
-
-.text2 {
-  float: right;
-  width: 50%;
-}
-
-.images2 {
-  float: right;
-  width: 50%;
-}
-
-.eat{
-  width: 50%;
-  
-}
-
-/*Menu*/
-
-.dish-container {
+/*ItalianCuisite*/
+.ItalianCuisite{
   display: flex;
-  flex-wrap: wrap;
-  column-gap: 3rem;
-  row-gap: 3rem;
-  max-width: 68%;
-  margin: 0 auto;
+  padding: 10% 10% 0 10%;
+ 
+}
+.ItalianCuisiteText{
+  display: flex ;
+  flex-direction: column;
+  justify-items: left;
+  
+  max-width: 50%;
+}
+.ItalianCuisitePasta{
+  width: 50vw;
+}
+@media (max-width: 767px){
+  .ItalianCuisite{
+    flex-direction: column;
+  }
+  .ItalianCuisiteText{
+    
+    max-width: 100%;
+  }
+  .ItalianCuisitePasta{
+    width: 95%;
+  }
+
+  
 }
 
 
+.ItalianCuisiteText h2{
+  background-color: #ff880062;
+  border-radius: 25px;
+  padding: 5px 15px 5px 15px;
+  font-size: 1em;
+  width: 20%;
+  
+  color: #FF8A00;
+}
+.ItalianCuisiteText h1{
+ 
+  font-weight:bold;
+  font-size: 3.5em;
+  font-family:Arial, Helvetica, sans-serif;
+  text-align: left;
+  font-weight: 700;
+}
+.ItalianCuisiteText p{
+  font-size: 1.3em;
+  text-align: left;
+  
+  font-family:Arial, Helvetica, sans-serif;
+  line-height: 1.6em;
+  word-spacing: 4px;
+}
+.ItalianCuisiteButton{
+  display: flex;
+  
+}
+.ReservationGreenButton{
+  
+  background-color: #3FA72F;
+}
+  .ReservationGreenButton:hover{
+    background-color: #3fa72fac;
+}
 
+.ItalianCuisiteButton a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.2rem;
+    height: 50px;
+    width: 200px;
+    border-radius: 30px;
+    text-decoration: none;
+    margin: 5%;
+}
 
+/*VelcomToDelizioso*/
+.VelcomToDelizioso{
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 5% 10% 0 10%;
+
+  background-color: #3fc66e1d;
+}
+.VelcomToDeliziosoText{
+  display: flex ;
+  flex-direction: column;
+  justify-items: left;
+  
+  width: 50%;
+}
+.VelcomToDeliziosoSalad{
+  width: 90%;
+}
+.VelcomToDeliziosoText h1{
+  font-size: 3em;
+}
+.VelcomToDeliziosoText h1 span{
+  color: #ff8a00;
+}
+.VelcomToDeliziosoText p{
+  font-size: 1.2em;
+  text-align: left;
+  width: 90%;
+  line-height: 1.6em;
+  word-spacing: 3px;
+}
+.VelcomToDeliziosoText a{
+  height: 50px;
+  width: 200px;
+  border-radius: 30px;
+  background-color: #ff8a00;
+  margin-top:20% ;
+}
+
+@media (max-width: 767px){
+  .VelcomToDelizioso{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    padding: 0;
+  }
+  .VelcomToDeliziosoText{
+    margin: auto;
+    width: 80%;
+  }
+  .VelcomToDeliziosoSalad{
+    margin: auto;
+    width: 80%;
+  }
+}
 /*ReservationBlock*/
 #ReservationBlock{
   display: flex;
@@ -53,8 +146,17 @@
 }
 @media (max-width: 767px){
   #ReservationBlock{
+    display: flex ;
     flex-direction: column-reverse;
+    align-items: center;
+    padding: 0; 
+    margin: 0;
   }
+  .ReservationImgBlock{
+    width: 80%;
+  }
+  
+
 }
 
 .ReservationTextBlock{
@@ -104,8 +206,8 @@
 #ReservationImg2{
   object-fit: cover;
   border-radius: 100%;
-  width: 20em;
-  height: 20em;
+  width: 35vw;
+  height: 35vw;
   margin-left: 10vh;
   margin-right: 10vh;
   box-shadow: 0 0 0 35px #f9f0e4,0 0 0 120px #fffbf5, 0 0 0 121px #ede8e0;
@@ -135,15 +237,19 @@
     width:  18vh;
     height: 25vh;
     border-radius: 25px;
-    margin: 0;
+    margin: 25px;
   }
   .ChefContainer{
-    
+    width: 100vw;
     display: flex;
-    padding: 5vh;
+    align-items: center;
+    padding: 0;
+    
+    margin: auto;
 
 
   }
+  
 }
 
 #chef1{
@@ -159,7 +265,8 @@
 }
 
 #ChefAllVive{
-  margin-top: 100px;
+  
+  margin: 100px auto 50px auto;
 }
 .ChefText{
   font-size: 3rem;
@@ -186,6 +293,10 @@
 }
 
 @media (max-width: 767px){
+  #PeopleBlock{
+    width: 100vw;
+    margin: 0 ;
+  }
   #peopleImg1,#peopleImg6{
     
     display: none;
@@ -274,113 +385,27 @@
   font-size: 150%;
   color: #ffffff;
 }
-
+.OpeningHoursCard div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
 .ReservationButton{
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.2rem;
+  text-decoration: none;
   margin: 5%;
   height: 50px;
   width: 200px;
   border-radius: 30px;
   background-color: #f2f2f2;
   color: black;
+  margin-top: 1%;
 }
-
-
-/*FOOTER*/
-footer{
-  background-color: rgb(49, 31, 9);
-  display:flex;
-  width: 100%;
-  flex-wrap: wrap;
-   
-}
-@media (min-width: 767px) {
-  .Info{
-    max-width: 15%;
-    margin-top: 10%;
-    padding-left: 5%; 
-    margin: 5%
-  }
-}
-
-@media (max-width: 767px) {
-  footer {
-    display: grid; /* Переключаем на вертикальное расположение */
-  }
-  .Info{
-    max-width: 500px;
-    padding-left: 5%; 
-    margin-top: 5%;
-    margin-bottom: 0;
-  }
-  
-}
-.LogoFooter{
-  margin-top: 9px;
-  margin-bottom: 10px;
-  width: 40px;
-}
-.LogoName {
-  color:rgb(227, 226, 223) ;
-  font-size: 1rem;
-  margin-top: 20px;
-  margin-bottom: 35p
-}
-.LogoName span{
-  color:#ff8a00
-}
-.footerText{
-  color: rgb(227, 226, 223) ;
-  max-width:  250px;
-  letter-spacing:0.08em;
-  line-height: 160%;
-  word-spacing: 100%;
-}
-
-.footerH1{
-  color: rgb(255, 138, 0);
-}
-.socialsite{
-  max-width: 25px;
-  
-}
-.socialsiteButton{
-  border-radius: 50%;
-  height: 40px;
-  width: 40px;
-  margin-right: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f2f2f2;
-}
-
-.buttonBlock{
-  display: flex;
-}
-
-.footerButton{
-  color :rgb(227, 226, 223);
-  background: none;
-  border: none;
-  margin-top: 15px;
-  
-}
-
-
-.Page{
-  margin-top: 10%;
-  margin: 5%;
-  margin-bottom: 0;
-}
-.Information{
-  margin-top: 10%;
-  margin: 5%;
-  margin-bottom: 0;
-  margin-right:5% ;
-}
-.contacts{
-  margin-top: 10%;
-  margin: 5%;
-  margin-left: 5%;
+.ReservationButton:hover{
+  background-color: #f2f2f2ac;
 }

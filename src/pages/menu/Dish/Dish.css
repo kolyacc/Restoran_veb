@@ -1,6 +1,6 @@
 
 .dish {
-    width: 17rem;
+    max-width:  17rem;
     text-align: center;
     border-radius: 55px;
     padding: 0.5rem;
@@ -8,12 +8,15 @@
 }
 
 .dish-img {
-    width: 60%;
+    max-width:  60%;
     margin: 0 auto;
+    
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
 }
 
 .dish p {
     margin: 0 0 0.5rem;
+    
 }
 
 .dish-footer {
@@ -21,4 +24,19 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+}
+@media  (max-width: 767px) {
+    .dish {
+        max-width:  10rem;
+        border-radius:25px ;
+    }
+    .dish p {
+        margin: 0  0.5rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;  /* Кількість рядків */
+        line-clamp: 3;          /* Standard property for compatibility */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        max-width: 300px; /* Обмежує ширину */
+    }
 }

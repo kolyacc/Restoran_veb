@@ -1,19 +1,56 @@
-import { useState } from 'react'
+import { useState, useEffect} from 'react'
 import './Dish.css'
-function Dish(props){
-    const {title, rating, description ,price, DishImg} = props
+import '../Menu.css'
+import { Dishes } from './Dish'
+import Countries from './Components/Countries.jsx'
+import Pagination from './Components/Pagination.jsx'
+
+
+
+
+function Dish( {category}){
     
-    return(
-    <div className='dish'>
-        <img className='dish-img' src={DishImg} alt='dish image'></img>
-        <p>{title}</p>
-        <p>{rating}</p>
-        <p>{description}</p>
-        <div className='dish-footer'>
-            <p>${price}</p>
-            <button className='OrengeButton' id='OrderNowMenu'>Order now</button>
+    const [countries, setCountries] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [countriesPerPage] = useState(6);
+
+    useEffect(() => {
+        const getCountries = async () => {
+            setLoading(true);
+            if (category !== 'All category') {
+                const res = Dishes.filter(dish => dish.category === category);
+                setCountries(res);
+                setCurrentPage(1);
+            } else {
+                setCountries(Dishes);
+                setCurrentPage(1);
+            }
+            setLoading(false);
+        };
+        getCountries();
+    }, [category]); 
+
+    const lastCountryIndex = currentPage * countriesPerPage;
+    const firstCountryIndex = lastCountryIndex - countriesPerPage;
+    const currentCountry = countries.slice(firstCountryIndex, lastCountryIndex);
+
+    const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+    return (
+        <div>
+            <div className='dish-container'>
+                <Countries countries={currentCountry} loading={loading} />
+            </div>
+            <div className='pagination'>
+                <Pagination 
+                    countriesPerPage={countriesPerPage} 
+                    totalCounties={countries.length}
+                    paginate={paginate}
+                />
+            </div>
         </div>
-    </div>)
+    );
 }
 
 export default Dish
