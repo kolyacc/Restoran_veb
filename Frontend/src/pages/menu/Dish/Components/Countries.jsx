@@ -12,6 +12,7 @@ const Countries = ({ countries,loading }) => {
                     
 
                     <div className='dish'>
+                        
                         <img className='dish-img' src={country.dishImg} alt='dish image'></img>
                         <h2 >{country.title}</h2>
                         

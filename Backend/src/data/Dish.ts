@@ -4,26 +4,26 @@
 
 
 
-  export const Dishes = [
+export const Dishes = [
     {
         id: 1,
-        title: 'Spaghetti',
+        title: 'Masha lox',
         type: 'Pasta',
         category: 'Dinner',
         
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam. ',
         price: 25.5,
-        dishImg: './spaghetti.png'
+        dishImg: 'https://i.postimg.cc/prhf6X5j/spaghetti.png'
     },
     {
         id: 2,
-        title: 'Spag',
+        title: 'Spagggggg',
         type: 'Launch',
         category: 'Dessert',
         
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam. ',
         price: 25.5,
-        dishImg: './spaghetti.png'
+        dishImg: "https://i.postimg.cc/prhf6X5j/spaghetti.png"
     },
     {
         id: 3,
@@ -33,7 +33,7 @@
         
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam. ',
         price: 25.5,
-        dishImg: './spaghetti.png'
+        dishImg: 'https://i.postimg.cc/prhf6X5j/spaghetti.png'
     },
     {
         id: 4,
@@ -43,7 +43,7 @@
         
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam. ',
         price: 25.5,
-        dishImg: './spaghetti.png'
+        dishImg: 'https://i.postimg.cc/prhf6X5j/spaghetti.png'
     },
     {
         id: 5,
@@ -53,17 +53,17 @@
         
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam. ',
         price: 25.5,
-        dishImg: './spaghetti.png'
+        dishImg: 'https://i.postimg.cc/prhf6X5j/spaghetti.png'
     },
     {
         id: 6,
         title: 'Spaghetti',
         type: 'Pasta',
-        category: 'Dinner',
+        category: 'Launch',
         
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam. ',
         price: 25.5,
-        dishImg: './spaghetti.png'
+        dishImg: 'https://i.postimg.cc/prhf6X5j/spaghetti.png'
     },
     {
         id: 7,
@@ -73,7 +73,7 @@
         
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam. ',
         price: 25.5,
-        dishImg: './spaghetti.png'
+        dishImg: 'https://i.postimg.cc/prhf6X5j/spaghetti.png'
     },
     {
         id: 8,
@@ -83,17 +83,17 @@
         
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam. ',
         price: 25.5,
-        dishImg: './spaghetti.png'
+        dishImg: 'https://i.postimg.cc/prhf6X5j/spaghetti.png'
     },
     {
         id: 9,
         title: 'Spaghetti',
         type: 'Pasta',
-        category: 'Dinner',
+        category: 'Launch',
         
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam. ',
         price: 25.5,
-        dishImg: './spaghetti.png'
+        dishImg: 'https://i.postimg.cc/prhf6X5j/spaghetti.png'
     },
     {
         id: 10,
@@ -103,7 +103,7 @@
         
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam. ',
         price: 25.5,
-        dishImg: './spaghetti.png'
+        dishImg: 'https://i.postimg.cc/prhf6X5j/spaghetti.png'
     },
     
 ]

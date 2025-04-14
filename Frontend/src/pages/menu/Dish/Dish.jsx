@@ -1,51 +1,48 @@
-import { useState, useEffect} from 'react'
-import './Dish.css'
-import '../Menu.css'
-import { Dishes } from './Dish'
-import Countries from './Components/Countries.jsx'
-import Pagination from './Components/Pagination.jsx'
+import { useState, useEffect } from 'react';
+import './Dish.css';
+import '../Menu.css';
 
+import Countries from './Components/Countries.jsx';
+import Pagination from './Components/Pagination.jsx';
 
-
-
-function Dish( {category}){
-    
+function Dish({ category }) {
     const [countries, setCountries] = useState([]);
     const [loading, setLoading] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
     const [countriesPerPage] = useState(6);
+    const [totalCount, setTotalCount] = useState(0);
 
+    useEffect(() => {
+        setCurrentPage(1);
+    }, [category]);
     useEffect(() => {
         const getCountries = async () => {
             setLoading(true);
-            if (category !== 'All category') {
-                const res = Dishes.filter(dish => dish.category === category);
-                setCountries(res);
-                setCurrentPage(1);
-            } else {
-                setCountries(Dishes);
-                setCurrentPage(1);
-            }
+            const url = category !== 'All category'
+                ? `http://localhost:3001/Dishes/${category}?page=${currentPage}&limit=${countriesPerPage}`
+                : `http://localhost:3001/Dishes?page=${currentPage}&limit=${countriesPerPage}`;
+
+            const response = await fetch(url);
+            const res = await response.json();
+
+            setCountries(res.data);
+            setTotalCount(res.total);
             setLoading(false);
         };
         getCountries();
-    }, [category]); 
-
-    const lastCountryIndex = currentPage * countriesPerPage;
-    const firstCountryIndex = lastCountryIndex - countriesPerPage;
-    const currentCountry = countries.slice(firstCountryIndex, lastCountryIndex);
+    }, [category, currentPage]);
 
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
     return (
         <div>
             <div className='dish-container'>
-                <Countries countries={currentCountry} loading={loading} />
+                <Countries countries={countries} loading={loading} />
             </div>
             <div className='pagination'>
-                <Pagination 
-                    countriesPerPage={countriesPerPage} 
-                    totalCounties={countries.length}
+                <Pagination
+                    countriesPerPage={countriesPerPage}
+                    totalCounties={totalCount}
                     paginate={paginate}
                 />
             </div>
@@ -53,4 +50,4 @@ function Dish( {category}){
     );
 }
 
-export default Dish
+export default Dish;
