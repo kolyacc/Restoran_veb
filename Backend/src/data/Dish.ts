@@ -7,8 +7,7 @@
 export const Dishes = [
     {
         id: 1,
-        title: 'Masha lox',
-        type: 'Pasta',
+        title: 'Masha loxxxxxx',
         category: 'Dinner',
         
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam. ',
@@ -18,7 +17,6 @@ export const Dishes = [
     {
         id: 2,
         title: 'Spagggggg',
-        type: 'Launch',
         category: 'Dessert',
         
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam. ',
@@ -28,7 +26,6 @@ export const Dishes = [
     {
         id: 3,
         title: 'Spaghet ticcccc',
-        type: 'Launch',
         category: 'Dessert',
         
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam. ',
@@ -38,7 +35,6 @@ export const Dishes = [
     {
         id: 4,
         title: 'Spaghe  fff ddftti',
-        type: 'Dessert',
         category: 'Drink',
         
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam. ',
@@ -48,7 +44,6 @@ export const Dishes = [
     {
         id: 5,
         title: 'Drink',
-        type: 'Pasta',
         category: 'Drink',
         
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam. ',
@@ -58,7 +53,6 @@ export const Dishes = [
     {
         id: 6,
         title: 'Spaghetti',
-        type: 'Pasta',
         category: 'Launch',
         
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam. ',
@@ -68,7 +62,6 @@ export const Dishes = [
     {
         id: 7,
         title: 'Spaghetti',
-        type: 'Pasta',
         category: 'Dinner',
         
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam. ',
@@ -78,7 +71,6 @@ export const Dishes = [
     {
         id: 8,
         title: 'Spaghetti',
-        type: 'Pasta',
         category: 'Dinner',
         
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam. ',
@@ -88,7 +80,6 @@ export const Dishes = [
     {
         id: 9,
         title: 'Spaghetti',
-        type: 'Pasta',
         category: 'Launch',
         
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam. ',
@@ -97,8 +88,25 @@ export const Dishes = [
     },
     {
         id: 10,
-        title: 'Spaghetti',
-        type: 'Pasta',
+        title: 'Spaghettiiiii',
+        category: 'Dinner',
+        
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam. ',
+        price: 25.5,
+        dishImg: 'https://i.postimg.cc/prhf6X5j/spaghetti.png'
+    },
+    {
+        id: 11,
+        title: 'Spaghettiiiii',
+        category: 'Dinner',
+        
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam. ',
+        price: 25.5,
+        dishImg: 'https://i.postimg.cc/prhf6X5j/spaghetti.png'
+    },
+    {
+        id: 12,
+        title: 'Spaghettiiiii',
         category: 'Dinner',
         
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam. ',

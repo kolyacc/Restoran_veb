@@ -18,10 +18,8 @@ function Dish({ category }) {
     useEffect(() => {
         const getCountries = async () => {
             setLoading(true);
-            const url = category !== 'All category'
-                ? `http://localhost:3001/Dishes/${category}?page=${currentPage}&limit=${countriesPerPage}`
-                : `http://localhost:3001/Dishes?page=${currentPage}&limit=${countriesPerPage}`;
-
+            const url = `http://localhost:3001/Dishes/${category}?page=${currentPage}&limit=${countriesPerPage}`;
+            
             const response = await fetch(url);
             const res = await response.json();
 

@@ -17,6 +17,7 @@
     "@types/node": "^22.14.0",
     "cors": "^2.8.5",
     "express": "^5.1.0",
+    "express-validator": "^7.2.1",
     "typescript": "^5.8.2"
   },
   "devDependencies": {
