@@ -1,8 +1,15 @@
 
- import {app} from './app'
+ import { run } from 'node:test'
+import {app} from './app'
+import { runDb } from './repositories/db'
 
 const port = 3001
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+const startApp = async () => {
+  await runDb()
+  app.listen(port, () => {
+    
+    console.log(`Example app listening on port ${port}`)
+  })
+}
+startApp()

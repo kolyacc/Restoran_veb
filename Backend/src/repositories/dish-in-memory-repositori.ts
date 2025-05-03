@@ -1,15 +1,16 @@
 import { Dishes } from '../data/Dish';
+import { DishModel } from '../Models/DishModel';
 
 
 
 export const DishesRepositori = {
 
-    findDishById: (id: number) => {
-        const dish = Dishes.find(dish => dish.id === id);
-        return dish;
+    async findDishById(id: number): Promise<DishModel[]>{
+        let dish = Dishes.find(dish => dish.id === id);
+        return dish ? [dish] : [];
     },
 
-    getDishesCategori: (category: string) => {
+    getDishesCategori (category: string):Promise<DishModel[]>{
         
         let filteredDishes: typeof Dishes = [];
         if (category === 'All category') {
@@ -17,9 +18,9 @@ export const DishesRepositori = {
         } else {
                 filteredDishes = Dishes.filter(dish => dish.category === category);
         }
-        return filteredDishes;
+        return Promise.resolve(filteredDishes);
     },
-    createDish: (newDish: CreateDishModel) => {
+    async createDish (newDish: CreateDishModel): Promise<DishModel[]> {
         const dish = {
             id: Dishes.length + 1,
             title: newDish.title,
@@ -29,9 +30,9 @@ export const DishesRepositori = {
             dishImg: newDish.dishImg
         };
         Dishes.push(dish);
-        return dish;
+        return [dish];
     },
-    updateDish: (id: number, updatedDish: Partial<CreateDishModel>) => {
+    async updateDish (id: number, updatedDish: Partial<CreateDishModel>): Promise<DishModel | null> {
         const dishIndex = Dishes.findIndex(dish => dish.id === id);
         if (dishIndex !== -1) {
             const updated = { ...Dishes[dishIndex], ...updatedDish };
@@ -40,7 +41,7 @@ export const DishesRepositori = {
         }
         return null;
     },
-    deleteDish: (id: number) => {   
+    async deleteDish (id: number):Promise<DishModel | null>{   
         const dishIndex = Dishes.findIndex(dish => dish.id === id);
         if (dishIndex !== -1) {
             const deletedDish = Dishes[dishIndex];
