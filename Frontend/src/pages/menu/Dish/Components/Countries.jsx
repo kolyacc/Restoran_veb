@@ -8,10 +8,10 @@ const Countries = ({ countries,loading }) => {
     return (
         <div className='dish-container'>
             {
-                countries.map((country,i) => (
+                countries.map((country) => (
                     
 
-                    <div className='dish'>
+                    <div className='dish' key={country._id}>
                         
                         <img className='dish-img' src={country.dishImg} alt='dish image'></img>
                         <h2 >{country.title}</h2>

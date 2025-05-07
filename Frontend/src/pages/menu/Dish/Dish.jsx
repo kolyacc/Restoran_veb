@@ -19,13 +19,13 @@ function Dish({ category }) {
         const getCountries = async () => {
             setLoading(true);
             const url = `http://localhost:3001/Dishes/category/${category}?page=${currentPage}&limit=${countriesPerPage}`;
-            //const url = `http://localhost:3001/Dishes`;
+            
             const response = await fetch(url);
             const res = await response.json();
 
             setCountries(res.data);
             setTotalCount(res.total);
-            //setTotalCount(30);
+            
             
             setLoading(false);
         };

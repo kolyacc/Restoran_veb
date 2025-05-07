@@ -1,11 +1,13 @@
 import {MongoClient} from 'mongodb';
 import { DishModel } from '../Models/DishModel';
+import { UserDbType } from './userDbType';
 
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017';
 
 const client = new MongoClient(MONGODB_URI);
 const db =client.db("RestoranWeb");
 export const dishCollection = db.collection<DishModel>("Dishes");
+export const userCollection = db.collection<UserDbType>("users");
 export async function runDb() {
     try {
         await client.connect();

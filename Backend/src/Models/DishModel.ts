@@ -1,5 +1,6 @@
+import { ObjectId } from 'mongodb';
 export type DishModel = {
-    id: number;
+    _id: ObjectId;
     title: string;
     category: string;
     description: string;

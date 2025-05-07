@@ -1,4 +1,5 @@
 
+import { ObjectId } from 'mongodb';
 import { DishModel } from '../Models/DishModel';
 import { dishCollection } from './db';
 
@@ -6,49 +7,39 @@ import { dishCollection } from './db';
 
 export const DishesRepositori = {
 
-    async findDishById(id: number): Promise<DishModel[]>{
-        let dish = await dishCollection.find({id} ).toArray();
+    async findDishById(_id: ObjectId): Promise<DishModel[]>{
+        let dish = await dishCollection.find({_id} ).toArray();
         return dish;
     },
 
-    async getDishesCategori (category: string): Promise<DishModel[]>{
+    async getDishesCategori (category: string, startIndex: number, limit: number): Promise<{ Dish: DishModel[]; total: number }> {
+        const filter = category === 'All category' ? {} : { category };
         
-        let filteredDishes: DishModel[] = [];
-        if (category === 'All category') {
-                filteredDishes = await dishCollection.find().toArray();
-        } else {
-                filteredDishes = await dishCollection.find({category} ).toArray();
-        }
-        return filteredDishes;
+        const Dish =await dishCollection.find(filter ).skip(startIndex).limit(limit).toArray();
+        const total = await dishCollection.countDocuments(filter);
+        
+        return { Dish, total };
+        
     },
-    async createDish (newDish: CreateDishModel): Promise<DishModel[]> {
-        const dish = {
-            id: (await dishCollection.countDocuments()) + 1,
-            title: newDish.title,
-            category: newDish.category,
-            description: newDish.description,
-            price: newDish.price,
-            dishImg: newDish.dishImg
-        };
-        await dishCollection.insertOne(dish);
-        return [dish];
-    },
-    async updateDish (id: number, updatedDish: Partial<CreateDishModel>): Promise<DishModel | null> {
-        const dish = await dishCollection.findOne({ id });
-        if (!dish) return null;
-        const { _id, ...rest } = dish;
-        const merged = { ...rest, ...updatedDish };
-        await dishCollection.updateOne(
-            { id },
-            { $set: merged }
-        );
+    
+    async createDish (newDish: DishModel): Promise<DishModel[]> {
+        
 
-        return merged as DishModel;
+        await dishCollection.insertOne(newDish);
+        return [newDish];
     },
-    async deleteDish (id: number):Promise<DishModel | null>{   
+    async updateDish (_id: ObjectId, updatedDish: Partial<DishModel>): Promise<DishModel | null> {
+        const dish = await dishCollection.findOne({_id });
+        if (!dish) return null;
+        const { _id: dishId, ...rest } = dish;
+        const merged = { _id: dishId, ...rest, ...updatedDish };
+        await dishCollection.updateOne({ _id }, { $set: merged });
+        return merged;
+    },
+    async deleteDish (_id: ObjectId):Promise<DishModel | null>{   
         const result = await dishCollection.findOneAndDelete(
-            { id },
-            { projection: { _id: 0 } }
+            { _id }
+            
         );
         return result;
     }

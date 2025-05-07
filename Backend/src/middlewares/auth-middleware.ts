@@ -1,0 +1,23 @@
+import { NextFunction, Request, Response } from 'express';
+
+// Extend the Request interface to include the 'user' property
+
+import { jwtServisec } from '../application/jwt-servise';
+import { userServisec } from '../services/user-servisec';
+
+
+export const authMiddleware = async (req: Request, res: Response, next: NextFunction) => {
+    if (!req.headers.authorization) {
+        res.status(401).json({ message: 'Authorization header is missing' });
+        return 
+    }
+    const token = req.headers.authorization.split(' ')[1];
+    const userId = await jwtServisec.getUserIdByToken(token);
+    if (userId) {
+        req.user =await userServisec.findUserbyId(userId);
+        return next();
+    }
+    res.status(401).json({ message: 'Invalid token' });
+    
+    
+}
