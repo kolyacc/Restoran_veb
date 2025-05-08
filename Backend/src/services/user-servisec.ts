@@ -4,12 +4,14 @@ import { ObjectId } from 'mongodb';
 import { UserDbType } from '../repositories/userDbType';
 import { userReposytory } from '../repositories/user-db-repositori';
 import { userCollection } from '../repositories/db';
+import { emailManager } from '../managers/email-manager';
 
 
 export const userServisec = {
     async createUser(login: string, email: string, password: string) {
         const passwordSalt= await bcrypt.genSalt(10);
         const passwordHash = await this._generateHash(password, passwordSalt);
+        
         const newUser :UserDbType = {
             _id: new ObjectId(),
             username: login,
@@ -17,9 +19,12 @@ export const userServisec = {
             passwordHash,
             passwordSalt,
             createdAt: new Date(),
-        }
+        } 
+        await emailManager.sendCreateUserMassage(newUser);
         return await userReposytory.createUser(newUser);
     },
+
+    
     async findUserbyId(id: ObjectId) {
         const user = await userReposytory.findUserById(id);
         if (!user) return null;

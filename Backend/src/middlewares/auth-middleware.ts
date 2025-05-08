@@ -1,7 +1,5 @@
 import { NextFunction, Request, Response } from 'express';
 
-// Extend the Request interface to include the 'user' property
-
 import { jwtServisec } from '../application/jwt-servise';
 import { userServisec } from '../services/user-servisec';
 

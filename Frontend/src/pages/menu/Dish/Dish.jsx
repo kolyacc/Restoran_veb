@@ -4,6 +4,7 @@ import '../Menu.css';
 
 import Countries from './Components/Countries.jsx';
 import Pagination from './Components/Pagination.jsx';
+import { settings } from '../../../settings/setting.js';
 
 function Dish({ category }) {
     const [countries, setCountries] = useState([]);
@@ -18,7 +19,7 @@ function Dish({ category }) {
     useEffect(() => {
         const getCountries = async () => {
             setLoading(true);
-            const url = `http://localhost:3001/Dishes/category/${category}?page=${currentPage}&limit=${countriesPerPage}`;
+            const url = `${settings.API_Back}/Dishes/category/${category}?page=${currentPage}&limit=${countriesPerPage}`;
             
             const response = await fetch(url);
             const res = await response.json();

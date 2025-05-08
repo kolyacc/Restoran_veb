@@ -5,6 +5,7 @@ import { countsRequest, requestCount } from './middlewares/countsRequest';
 import { UserRouter } from './routes/user-router';
 import { aythRouter } from './routes/auth-router';
 import { feadbeckRouter } from './routes/feedbeck-router';
+import { emailRouter } from './routes/email-router';
 
 export const app = express()
 
@@ -17,6 +18,7 @@ app.use('/Dishes', getDishesRouter())
 app.use('/User', UserRouter())
 app.use('/Auth', aythRouter())
 app.use('/Feedback', feadbeckRouter())
+app.use('/Email', emailRouter())
 
 
 

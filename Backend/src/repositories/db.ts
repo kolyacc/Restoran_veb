@@ -1,8 +1,9 @@
 import {MongoClient} from 'mongodb';
 import { DishModel } from '../Models/DishModel';
 import { UserDbType } from './userDbType';
+import { settings } from '../settings/setings';
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017';
+const MONGODB_URI = process.env.MONGODB_URI || settings.MONGO_URI;
 
 const client = new MongoClient(MONGODB_URI);
 const db =client.db("RestoranWeb");
