@@ -1,18 +1,22 @@
 import express, {Request, Response} from 'express'
-import { userServisec } from '../services/user-servisec';
+import { authServisec } from '../services/auth-servisec';
 import { jwtServisec } from '../application/jwt-servise';
 
 
 
-export const UserRouter= () => {
+export const userRouter= () => {
 
     const  router= express.Router()
 
-    router.post('/', 
+    router.post('/login', 
         async (req: Request, res: Response) => {
-            const user =await userServisec.createUser(req.body.login, req.body.email, req.body.password);
-            res.status(200).json({ user });
-            
+            const checkResalt =await authServisec.checkCredentials(req.body.loginOrEmail, req.body.password);
+            if(checkResalt){
+                const token = await jwtServisec.createJWT(checkResalt);
+                res.status(200).json({ token });
+            }
+            else
+                res.status(401).json('{ checkResalt }');
         });
     return router;
 }

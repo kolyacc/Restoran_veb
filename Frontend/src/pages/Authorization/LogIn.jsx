@@ -24,7 +24,7 @@ const Authorization = () => {
                             </label>
                             
                         </div>
-                        <div><NavLink>Forget password?</NavLink></div>
+                        <div><NavLink to="/LogIn/PasswordRecovery">Forget password?</NavLink></div>
                         
                     </div>
                     
