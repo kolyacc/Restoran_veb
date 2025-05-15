@@ -11,10 +11,10 @@ export const dishCollection = db.collection<DishModel>("Dishes");
 export const userCollection = db.collection<UserDbType>("users");
 
 
-export async function connectDb() {
+export async function connectDbMongoose() {
     try {
         await mongoose.connect(MONGODB_URI, { dbName: "RestoranWeb" });
-        console.log('Connected to MongoDB');
+        console.log('Mongoose connected to MongoDB');
     } catch (error) {
         console.error('Error connecting to MongoDB:', error);
     }

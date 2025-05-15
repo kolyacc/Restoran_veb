@@ -13,8 +13,8 @@ export type userData={
     username: string;
     email: string;
     passwordHash: string;
-    passwordSalt: string;
     createdAt: Date;
+    role: string;
 }
 export type emailVerificationData = {
     confirmationCode: string;
