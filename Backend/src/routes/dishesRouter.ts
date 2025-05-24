@@ -3,7 +3,13 @@ import { DishesRepositori } from '../repositories/dish-db-repositori';
 import { DishesServisec } from '../services/dish-servisec';
 import { inputValidationDish } from '../middlewares/input-validation-middleware';
 import { DishValidation } from '../middlewares/validations/dishValidation';
+import multer from 'multer';
 
+const upload = multer({ storage: multer.memoryStorage() });
+interface RequestWithFile extends Request {
+        file?: Express.Multer.File;
+    }
+    
 const { ObjectId } = require('mongodb');
 export const getDishesRouter= () => {
 
@@ -50,16 +56,23 @@ export const getDishesRouter= () => {
         
     });
 
+    // Define a type for requests with a file property
+    
+
     router.post('/createDish', 
+        upload.single('dishImg'),
         DishValidation,
         inputValidationDish,
-        async (req: Request, res: Response) => {
+        async (req: RequestWithFile, res: Response) => {
+        if (!req.file) {
+            res.status(400).json({ message: 'No file uploaded' });
+        }else
+        {
+        var newDish =await DishesServisec.createDishServise(req.body, req.file);
         
-        var newDish =await DishesServisec.createDishServise(req.body);
-        
-        res.status(201).json(newDish);
+        res.status(201).json(newDish);}
     });
-
+    
     router.put('/:id', 
         DishValidation,
         inputValidationDish,

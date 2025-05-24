@@ -21,3 +21,22 @@ export const authMiddleware = async (req: Request, res: Response, next: NextFunc
     
     
 }
+export const authAdminMiddleware = async (req: Request, res: Response, next: NextFunction) => {
+    if (!req.headers.authorization) {
+        res.status(401).json({ message: 'Authorization header is missing' });
+        return 
+    }
+    const token = req.headers.authorization.split(' ')[1];
+    
+    const userId = await jwtServisec.getUserIdByToken(token);
+    
+    if (userId) {
+        const user = await authServisec.findUserbyId(userId);
+        if (user?.userData.role === 'admin') {
+            return next();
+        }
+        res.status(403).json({ message: 'Forbidden: Admins only' });
+        return;
+    }
+    res.status(401).json({ message: 'Invalid token' });
+}
