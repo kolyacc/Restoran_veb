@@ -20,16 +20,16 @@ const Reservation = () => {
                 <img src={img} />
                 <div>
                     <h2>Book a table</h2>
-                    <label for="date">Date</label>
+                    <label htmlFor="date">Date</label>
                     <input type="date" id="date" />
-                    <label for="time">Time</label>
+                    <label htmlFor="time">Time</label>
                     <input 
                         type="time" 
                         id="time" 
                         value={time} 
                         onChange={handleTimeChange} 
                     />
-                    <label for="party-size">Party size</label>
+                    <label htmlFor="party-size">Party size</label>
                     <select id="party-size">
                         
                         

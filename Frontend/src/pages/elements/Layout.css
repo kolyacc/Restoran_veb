@@ -269,7 +269,7 @@ footer{
   .Page{
     display: grid;
 
-    margin-top: 10%;
+    margin-top: 50px;
     margin: 5%;
     margin-bottom: 0;
   }
@@ -278,14 +278,14 @@ footer{
     grid-row-gap: 5px;
     height: 12vh;
  
-    margin-top: 10%;
+    margin-top: 50px;
     margin: 5%;
     margin-bottom: 0;
     margin-right:5% ;
   }
   .contacts{
     
-    margin-top: 10%;
+    margin-top: 50px;
     margin: 5%;
     margin-left: 5%;
   }

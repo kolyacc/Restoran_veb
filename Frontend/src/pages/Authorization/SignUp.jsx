@@ -25,7 +25,7 @@ const Authorization = () => {
                             </label>
                             
                         </div>
-                        <div><NavLink>Forget password?</NavLink></div>
+                        
                         
                     </div>
                     

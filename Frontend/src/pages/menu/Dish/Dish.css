@@ -9,6 +9,7 @@
 
 .dish-img {
     max-width:  60%;
+    
     margin: 0 auto;
     
     filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
@@ -16,7 +17,7 @@
 
 .dish p {
     margin: 0 0 0.5rem;
-    
+    height: 16%;
 }
 
 .dish-footer {
@@ -27,7 +28,7 @@
 }
 @media  (max-width: 767px) {
     .dish {
-        max-width:  10rem;
+        max-width:  9rem;
         border-radius:25px ;
     }
     .dish p {
@@ -36,7 +37,7 @@
         -webkit-line-clamp: 3;  /* Кількість рядків */
         line-clamp: 3;          /* Standard property for compatibility */
         -webkit-box-orient: vertical;
-        overflow: hidden;
+        overflow:hidden;
         max-width: 300px; /* Обмежує ширину */
     }
 }
